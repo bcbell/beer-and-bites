@@ -5,10 +5,9 @@ This project is designed for craft beer and cider enthusiasts! Offering beermake
 __HTML Setup and Layout__
 1. HTML Boilerplate
 2. Header
-   - [ ] Link to Bootstrap- navigation bar 
-   - [ ] Link to Google Text Font [fonts.google.com] (https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts), (https://fonts.google.com/specimen/Architects+Daughter?query=architect)
-   - [ ] Incorporate CSS and Script lines
-   - [ ] Title: "Beers & Bites"
+   - [x ] Link to Google Text Font [fonts.google.com] (https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts), (https://fonts.google.com/specimen/Architects+Daughter?query=architect)
+   - [x ] Incorporate CSS and Script lines
+   - [ x] Title: "Beers & Bites"
 3. Body
    - [ ] H1 : "Beers & Bites"
    - [ ] Div id = "container"
@@ -22,6 +21,7 @@ __HTML Setup and Layout__
     - [ ] Div id = "footer" 
         * Set up div with id= "footer"
         * Connect each button to its corresponding navigation button 
+   - [ ] Link to Bootstrap- navigation bar 
 
 __JavaScript Setup and Layout__
 1. Variables
