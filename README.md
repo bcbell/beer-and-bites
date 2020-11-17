@@ -7,9 +7,8 @@ __HTML Setup and Layout__
 2. Header
    - [x ] Link to Google Text Font [fonts.google.com] (https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts), (https://fonts.google.com/specimen/Architects+Daughter?query=architect)
    - [x ] Incorporate CSS and Script lines
-   - [ x] Title: "Beers & Bites"
+   - [ x] Title: "Beers & Bites", add beer and hamburger emojis to title
 3. Body
-   - [ ] H1 : "Beers & Bites"
    - [ ] Div id = "container"
         * Set div tag with id="container" 
         * Set 4 div tags inside of "frames" for each frame
@@ -44,11 +43,13 @@ __JavaScript Setup and Layout__
 
 __CSS Setup and Layout__
 1. Body
-   - [ ] Setup a flex display
-   - [ ] Set background color gradient south #c36f09 
+   - [x ] Setup a flex display
+   - [ x ] Set background color gradient to top- resemble a beer
+   - [ x ] Center body 
 2.  Header
-    - [ ] Set text to Montserrat Subrayada
-    - [ ] Set font to #a63c06
+    - [ x ] Set text to Montserrat Subrayada
+    - [ x ] Set font to #a63c06
+    - [ x ] Set text size 50px
 3. Nav Bar /Footer
    - [ ] Set background color to #EEBA0B
    - [ ] Set font color to #710000

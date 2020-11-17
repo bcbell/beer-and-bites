@@ -1,0 +1,32 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
+    margin: 0; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ h1{
+    color: #a63c06;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #F3F0E8;
+   
+}
+
+container{
+    font-family:'Architects Daughter', cursive; 
+}
+.nav{
+    text-align: center;
+    
+    
+}
