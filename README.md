@@ -1,4 +1,4 @@
-# beer-and-bites
+# beers-and-bites
 
 This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options and recipes for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
 
