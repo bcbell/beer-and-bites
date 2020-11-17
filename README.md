@@ -40,7 +40,7 @@ __JavaScript Setup and Layout__
    - [ ] Setup a function to delete the previous information 
    - [ ] Render 
 
-__CSS__
+__CSS Setup and Layout__
 1. Body
    - [ ] Setup a flex display
    - [ ] Set background color gradient south #c36f09 
