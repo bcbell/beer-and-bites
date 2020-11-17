@@ -1,6 +1,6 @@
 # beer-and-bites
 
-This project is designed for craft beer and cider enthusiasts, offering beermaker recipes along with food pairing options and recipes. Also, included is the Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
+This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options and recipes for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
 
 __HTML Setup and Layout__
 1. HTML Boilerplate
