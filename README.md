@@ -4,7 +4,7 @@ __HTML Setup and Layout__
 1. HTML Boilerplate
 2. Header
    - [ ] Link to Bootstrap- navigation bar 
-   - [ ] Link to Google Text Font [fonts.google.com](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)[https://fonts.google.com/specimen/Architects+Daughter?query=architect]
+   - [ ] Link to Google Text Font [fonts.google.com](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)(https://fonts.google.com/specimen/Architects+Daughter?query=architect)
    - [ ] Incorporate CSS and Script lines
    - [ ] Title: "Beers & Bites"
 3. Body
@@ -17,27 +17,27 @@ __HTML Setup and Layout__
         * Set div tag with id ="nav"
         * Set 4 button tags inside of "nav" for each button on the navigation bar
         * Search 
-    -[ ] Div id = "footer" 
+    - [ ] Div id = "footer" 
         * Set up div with id= "footer"
-        * Connect each button to the navigation button 
+        * Connect each button to its corresponding navigation button 
 
 __JavaScript Setup and Layout__
 1. Variables
-   -[ ] beerFood
+   - [ ] beerFood
 2. Cached Element Reference
-   -[ ] Establish cached element reference
+   - [ ] Establish cached element reference
         * Each of the 4 buttons
         * Container
         * Navigation Bar
 3. Event Listeners
-    -[ ] Establish event listeners
+    - [ ] Establish event listeners
         * Each of the 4 buttons
         * Container
         * Navigation Bar
         * Search 
 4. Functions
    - [ ] appendDiv for beerFood
-   - [ ] Setup a function to delete the previous information 
+   - [ ] Setup a function to delete the previous information and search again
    - [ ] Render 
 
 __CSS Setup and Layout__
@@ -45,7 +45,7 @@ __CSS Setup and Layout__
    - [ ] Setup a flex display
    - [ ] Set background color gradient south #c36f09 
 2.  Header
-    -[ ] Set text to Montserrat Subrayada
+    - [ ] Set text to Montserrat Subrayada
     - [ ] Set font to #a63c06
 3. Nav Bar /Footer
    - [ ] Set background color to #EEBA0B
