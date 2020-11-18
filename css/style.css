@@ -1,6 +1,16 @@
 html{
     box-sizing: border-box;
 }
+
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -21,8 +31,44 @@ body{
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
-container{
-    font-family:'Architects Daughter', cursive; 
+container {
+    display: grid;
+}
+
+#beerpairings{
+    background-color:#F3F0E8;
+    font-family:'Montserrat Subrayada', cursive; 
+    color: #a63c06;
+    outline: #a63c06 solid;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #F3F0E8;  
+}
+
+#recipes{
+    background-color: #F3F0E8;
+    font-family:'Montserrat Subrayada', cursive; 
+    color: #a63c06;
+    outline: #a63c06 solid;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #F3F0E8;  
+}
+
+#brewerylocator {
+    background-color: #F3F0E8;
+    font-family:'Montserrat Subrayada', cursive; 
+    color: #a63c06;
+    outline: #a63c06 solid;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #F3F0E8;  
+}
+
+#foodtrivia{
+    background-color: #F3F0E8;
+    font-family:'Montserrat Subrayada', cursive; 
+    color: #a63c06;
+    outline: #a63c06 solid;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #F3F0E8;  
 }
 
 .navbar {
@@ -35,6 +81,7 @@ container{
     float: left;
     font-weight: bold;
 }
+
 .navbar-nav{
     background: #eeba0b;
     color:#a63c06;
@@ -45,6 +92,7 @@ container{
     padding: 0;
     align-content:center;  
 }
+
 .nav-link{
     font-size: 22px;
     color: #a63c06;
@@ -59,10 +107,43 @@ container{
     outline: #a63c06 solid;
     background-color: #eeba0b;
 }
-@media only screen and (max-width:460px){
+@media only screen and (min-width:460px){
     .navbar{
         width: 100%;
         float: none;
     }
+    container {
+        display: grid;
+        text-align: left;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        beepairings recipes brewerylocator
+        beerpairings recipes brewerylocator
+        beerpairings recipes brewerylocator
+        beerpairings recipes foodtrivia ;
+    }
+
+    #beerpairings{
+        grid-area: beerpairing;
+        padding: 10px 0 0 40px;
+
+    }
+
+    #recipes{
+        grid-area: recipes;
+        padding: 10px 0 0 40px;
+    }
+
+    #brewerylocator{
+        grid-area: brewerylocator;
+        padding: 10px 0 0 40px;
+    }
+    
+    #foodtrivia{
+        grid-area:foodtrivia;
+        padding: 10px 0 0 40px;
+    }
+
 
 }
