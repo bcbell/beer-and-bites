@@ -9,18 +9,18 @@ __HTML Setup and Layout__
    - [x ] Incorporate CSS and Script lines
    - [ x] Title: "Beers & Bites", add beer and hamburger emojis to title
 3. Body
-   - [ ] Div id = "container"
+   - [ x] Div id = "container"
         * Set div tag with id="container" 
         * Set 4 div tags inside of "frames" for each frame
         * Set the header of each frame to h2
-   - [ ] Div id = "nav" 
+   - [x ] Div id = "nav" 
         * Set div tag with id ="nav"
         * Set 4 button tags inside of "nav" for each button on the navigation bar
         * Search 
-    - [ ] Div id = "footer" 
-        * Set up div with id= "footer"
-        * Connect each button to its corresponding navigation button 
-   - [ ] Link to Bootstrap- navigation bar 
+    - ~~[ ] Div id = "footer" ~~ no longer adding a footer
+        ~~* Set up div with id= "footer"~~
+       ~~ * Connect each button to its corresponding navigation button ~~
+   - [ x] Link to Bootstrap- navigation bar 
 
 __JavaScript Setup and Layout__
 1. Variables
@@ -51,15 +51,15 @@ __CSS Setup and Layout__
     - [ x ] Set font to #a63c06
     - [ x ] Set text size 50px
 3. Nav Bar /Footer
-   - [ ] Set background color to #EEBA0B
-   - [ ] Set font color to #710000
-   - [ ] Set text to Architect's Daughter
-   - [ ] Shadow box
+   - [ x] Set background color to #EEBA0B
+   - [ x] Set font color to #710000
+   - [ x] Set text to Architect's Daughter
+   - [ x] Shadow box
 4. Buttons : Hover
-   - [ ] Set color to white 
+   - [x ] Set color to black 
 5. Container
-   - [ ] Setup grid
-   - [ ] Setup text to Architect's Daughter
+   - [ x] Setup grid
+   - [x ] Setup text to Architect's Daughter
 6. Container - H2
-   - [ ] Set H2 text to Montserrat Subrayada
+   - [ x] Set H2 text to Montserrat Subrayada
 
