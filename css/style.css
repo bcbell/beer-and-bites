@@ -18,15 +18,53 @@ body{
     font-size: 50px;
     text-align: center;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #F3F0E8;
-   
+    -webkit-text-stroke-color: #F3F0E8;  
 }
 
 container{
     font-family:'Architects Daughter', cursive; 
 }
-.nav{
-    text-align: center;
+
+.navbar {
+    align-content: space-between;   
+    font-family:'Architects Daughter', cursive; 
+    margin: 0 0 1rem 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    font-weight: bold;
     
-    
+
+}
+.navbar-nav{
+    background: #eeba0b;
+    color:#a63c06;
+    margin: 0;
+    font-weight: bold;
+    justify-content: space-around;
+    width: 1350px;
+    padding: 0;
+    align-content:center;  
+}
+.nav-link{
+    font-size: 22px;
+    color: #a63c06;
+   text-shadow:2px 2px 2px  white;
+}
+
+.btn{
+    color: #a63c06;
+}
+
+.btn.btn{
+    outline: #a63c06 solid;
+    background-color: #eeba0b;
+}
+@media only screen and (max-width:460px){
+    .navbar{
+        width: 100%;
+        float: none;
+    }
+
 }
