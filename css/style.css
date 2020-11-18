@@ -31,7 +31,6 @@ body{
     -webkit-text-stroke-color: #F3F0E8;
     width: 100%;
     
-    
 }
 
 #container {
@@ -137,7 +136,7 @@ body{
         padding: 10px 0px 10px 0;
         grid-column: 1;
         grid-row: 3/ span 22;
-        margin: 0 15px 0 15px;
+        margin: 0 0px 0 20px;
         text-align: left;
 
     }
@@ -147,8 +146,9 @@ body{
         padding: 10px 0 0 30px;
         grid-column: 2;
         grid-row: 3/ span 22 ;
-        margin: 0 15px 0 15px;
+        margin: 0 0px 0 20px;
         text-align: left;
+
     }
 
     #brewerylocator{
@@ -156,7 +156,7 @@ body{
         padding: 10px 0 0 10px;
         grid-column: 3;
         grid-row: 3/ span 15;
-        margin: 0 15px 0 15px;
+        margin: 0 10px 0 10px;
         text-align: center;
     }
     
@@ -165,7 +165,7 @@ body{
         padding: 10px 0 0 40px;
         grid-column: 3;
         grid-row: 18/ 25;
-        margin: 0 15px 0 15px;
+        margin: 0 10px 0 10px;
         text-align: left;
     }
 
