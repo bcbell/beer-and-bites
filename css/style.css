@@ -28,10 +28,11 @@ body{
     font-size: 50px;
     text-align: center;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #F3F0E8;  
+    -webkit-text-stroke-color: #F3F0E8;
+    
 }
 
-container {
+#container {
     display: grid;
 }
 
@@ -88,7 +89,7 @@ container {
     margin: 0;
     font-weight: bold;
     justify-content: space-around;
-    width: 1350px;
+    width: 100%;
     padding: 0;
     align-content:center;  
 }
@@ -107,16 +108,21 @@ container {
     outline: #a63c06 solid;
     background-color: #eeba0b;
 }
-@media only screen and (min-width:460px){
+@media only screen and (min-width: 260px){
     .navbar{
         width: 100%;
         float: none;
     }
-    container {
+
+    h1{
+        justify-content: center;
+    }
+    #container {
         display: grid;
-        text-align: left;
-        grid-template-columns: 40% 60%;
-        grid-template-rows: auto auto auto auto;
+        text-align: center;
+        gap: 20px;
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
         beepairings recipes brewerylocator
         beerpairings recipes brewerylocator
@@ -126,23 +132,31 @@ container {
 
     #beerpairings{
         grid-area: beerpairing;
-        padding: 10px 0 0 40px;
+        padding: 10px 50px 10px 40px;
+        grid-column: 1;
+        grid-row: 3/ span 22;
 
     }
 
     #recipes{
         grid-area: recipes;
-        padding: 10px 0 0 40px;
+        padding: 10px 0 0 30px;
+        grid-column: 2;
+        grid-row: 3/ span 22 ;
     }
 
     #brewerylocator{
         grid-area: brewerylocator;
         padding: 10px 0 0 40px;
+        grid-column: 3;
+        grid-row: 3/ span 15;
     }
     
     #foodtrivia{
         grid-area:foodtrivia;
         padding: 10px 0 0 40px;
+        grid-column: 3;
+        grid-row: 18/ 25;
     }
 
 
