@@ -27,10 +27,9 @@ body{
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 50px;
     text-align: center;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #F3F0E8;
     width: 100%;
-    
 }
 
 #container {
@@ -42,7 +41,7 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
     color: #a63c06;
     outline: #a63c06 solid;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
@@ -51,7 +50,7 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
     color: #a63c06;
     outline: #a63c06 solid;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
@@ -60,7 +59,7 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
     color: #a63c06;
     outline: #a63c06 solid;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
@@ -69,7 +68,7 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
     color: #a63c06;
     outline: #a63c06 solid;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
     
 }
@@ -98,7 +97,7 @@ body{
 .nav-link{
     font-size: 22px;
     color: #a63c06;
-   text-shadow:2px 2px 2px  white;
+   text-shadow:2px 2px 2px  #F3F0E8;
 }
 
 .btn{
@@ -108,7 +107,14 @@ body{
 .btn.btn{
     outline: #a63c06 solid;
     background-color: #eeba0b;
+    text-shadow: 2px 2px 2px #F3F0E8;
 }
+
+.foodtriviabtn{
+    color: #a63c06;
+    outline: #a63c06 solid;
+}
+
 @media only screen and (min-width: 260px){
     .navbar{
         width: 100%;
