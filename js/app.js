@@ -11,11 +11,19 @@
 //Beer & Pairings
     fetch("https://api.punkapi.com/v2/beers/random")
     .then((response)=>console.log(response.json()))
+    .then ( data => {
+        console.log(data)//change to return
+
+
+    })
 
 
 //Brewery Search
     fetch("https://api.openbrewerydb.org/breweries/search?query=dog")
     .then ((response)=> console.log(response.json()))
+    .then (data => {
+        console.log(data) // change to return
+    })
 
 
 
