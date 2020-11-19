@@ -1,6 +1,6 @@
 # beers-and-bites
 
-This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options and recipes for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
+This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
 
 __HTML Setup and Layout__
 1. HTML Boilerplate
@@ -11,11 +11,11 @@ __HTML Setup and Layout__
 3. Body
    - [ x] Div id = "container"
         * Set div tag with id="container" 
-        * Set 4 div tags inside of "frames" for each frame
+        * Set 2 div tags inside of "frames" for each frame
         * Set the header of each frame to h2
    - [x ] Div id = "nav" 
         * Set div tag with id ="nav"
-        * Set 4 button tags inside of "nav" for each button on the navigation bar
+        * Set 2 button tags inside of "nav" for each button on the navigation bar
         * Search 
     - ~~[ ] Div id = "footer" ~~ no longer adding a footer
         ~~* Set up div with id= "footer"~~
@@ -32,7 +32,7 @@ __JavaScript Setup and Layout__
         * Navigation Bar
 3. Event Listeners
     - [ ] Establish event listeners
-        * Each of the 4 buttons
+        * Each of the 2 buttons
         * Container
         * Navigation Bar
         * Search 

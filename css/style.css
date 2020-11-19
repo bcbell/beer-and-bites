@@ -45,7 +45,12 @@ body{
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
-#recipes{
+.description{
+    font-family:'Montserrat Subrayada', cursive; 
+    color: #a63c06; 
+}
+
+#brewerylocator{
     background-color: #F3F0E8;
     font-family:'Montserrat Subrayada', cursive; 
     color: #a63c06;
@@ -54,24 +59,6 @@ body{
     -webkit-text-stroke-color: #F3F0E8;  
 }
 
-#brewerylocator {
-    background-color: #F3F0E8;
-    font-family:'Montserrat Subrayada', cursive; 
-    color: #a63c06;
-    outline: #a63c06 solid;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F3F0E8;  
-}
-
-#foodtrivia{
-    background-color: #F3F0E8;
-    font-family:'Montserrat Subrayada', cursive; 
-    color: #a63c06;
-    outline: #a63c06 solid;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F3F0E8;  
-    
-}
 
 .navbar {
     align-content: space-between;   
@@ -110,10 +97,6 @@ body{
     text-shadow: 2px 2px 2px #F3F0E8;
 }
 
-.foodtriviabtn{
-    color: #a63c06;
-    outline: #a63c06 solid;
-}
 
 @media only screen and (min-width: 260px){
     .navbar{
@@ -130,10 +113,10 @@ body{
         grid-template-columns: repeat(2, 3fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
-        beepairings recipes brewerylocator
-        beerpairings recipes brewerylocator
-        beerpairings recipes brewerylocator
-        beerpairings recipes foodtrivia ;
+        beepairings brewerylocator 
+        beerpairings brewerylocator 
+        beerpairings brewerylocator
+        beerpairings brewerylocator ;
     }
 
 
@@ -143,37 +126,17 @@ body{
         grid-column: 1;
         grid-row: 3/ span 22;
         margin: 0 0px 0 20px;
-        text-align: left;
-
-    }
-
-    #recipes{
-        grid-area: recipes;
-        padding: 10px 0 0 30px;
-        grid-column: 2;
-        grid-row: 3/ span 22 ;
-        margin: 0 0px 0 20px;
-        text-align: left;
+        text-align: center;
 
     }
 
     #brewerylocator{
         grid-area: brewerylocator;
         padding: 10px 0 0 10px;
-        grid-column: 3;
-        grid-row: 3/ span 15;
+        grid-column: 2;
+        grid-row: 3/ span 22 ;
         margin: 0 10px 0 10px;
         text-align: center;
     }
     
-    #foodtrivia{
-        grid-area:foodtrivia;
-        padding: 10px 0 0 40px;
-        grid-column: 3;
-        grid-row: 18/ 25;
-        margin: 0 10px 0 10px;
-        text-align: left;
-    }
-
-
 }
