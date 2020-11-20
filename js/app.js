@@ -1,8 +1,10 @@
 /*-------------Variables----------------*/
-  const beers= []
+  var beers= []
 
   let firstAPICallBP = fetch("https://api.punkapi.com/v2/beers/random")
   let secondAPICallBrew = fetch("https://api.openbrewerydb.org/breweries/")
+
+  
   
  
   /*------------Cached Element References------*/
@@ -12,14 +14,16 @@
   const searchBtn =document.getElementById('searchBtn')
   const searchByText = document.getElementById('pairings')
  
+  let displayBP= document.getElementById('displayBP')
 /*--------------Functions---------------*/
 function renderHTML (firstAPIResponse, secondAPIResponse){
     document.querySelector('container').innerHTML=`<p>${firstAPIResponse.info} : ${secondAPIResponse}</p>`
 }
 
-function reneder(theAPI){
-    document.getElementById('container').innerHTML= `<p>${theAPI}</p>`
-}
+// function reneder(beer){
+
+//     document.getElementById('container').innerHTML= `<p>${beer}</p>`
+// }
 
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
@@ -30,28 +34,33 @@ fetch("https://api.punkapi.com/v2/beers/random")
     })
     .then (data => {
         console.log (data)//change to return
-        //    for(beer in beers){ //loops through the property of an object
-           const name = data[0].name
+           for(beers in data){ //loops through the property of an object
+           const name = data[beers].name
            console.log(name)
-           const tagline= data[0].tagline
+           const tagline= data[beers].tagline
            console.log(tagline)
-            const description = data[0].description
+            const description = data[beers].description
             console.log(description)
-            const image_url = data[0].image_url
+            const image_url = data[beers].image_url
             console.log (image_url)
-            const {ingredients} = data[0] //ingredients is an object and the following are objects within an object
+            const ingredients = data[beers].ingredients //ingredients is an object and the following are objects within an object
             const malt = ingredients.malt
             console.log(malt)
             const hops = ingredients.hops
             console.log(hops)
-            const food_pairing = data[0].food_pairing
+            const food_pairing = data[beers].food_pairing
             console.log(food_pairing)
-            const brewers_tips = data[0].brewers_tips
+            const brewers_tips = data[beers].brewers_tips
             console.log(brewers_tips)
-            
-            render(firstAPICallBP)
-    })
+          
+           displayBP.innerHTML = `<p><h3> Name: ${name}</h3> "${tagline}" </p>, <p> Beer Description:${description}</p>,<p>Food Pairing Options: ${food_pairing}</p>, <p> Brew Tips: ${brewers_tips} </p>`   
+        }
 
+    })   
+        .catch((err)=>{
+            console.log(err)
+        })
+    })
 
 //Brewery Search
 
@@ -63,109 +72,52 @@ brewerySearchBtn.addEventListener('click', ()=>{
         })
         .then (data => {
             console.log(data)//change to return
-                const name = data.name
+            for(beers in data){ 
+                const name = data[beers].name
                 console.log(name)
-                 const type = data.brewery_type
+                 const type = data[beers].brewery_type
                  console.log(type)
-                 const street =data.street
+                 const street =data[beers].street
                  console.log(street) 
-                 const city = data.city
+                 const city = data[beers].city
                  console.log (city)
-                 const state= data.state
+                 const state= data[beers].state
                  console.log(state)
-                 const zip= data.postal_code
+                 const zip= data[beers].postal_code
                  console.log(zip)
-                 const country= data.country
+                 const country= data[beers].country
                  console.log(country) 
-                 const phone= data.phone
+                 const phone= data[beers].phone
                  console.log(phone)
-                 const website= data.website_url
+                 const website= data[beers].website_url
                  console.log(website)
-                
-                 renederMe(secondAPICallBrew)
-               })      
-    
-            })
-         })
+             
+            }
+            render(beers)
+        })
+                .catch((err)=>{
+                    console.log(err)
+                })
+})
 
 //----Search Bar Request----//
-
-//Beer & Food Search (Text Search)
-
-searchBtn.addEventListener('click', ()=>{
-let searchText = searchByText.value
-    const url1 = `https://api.punkapi.com/v2/beers?foods=${searchText}`
-    console.log(url1)
-    fetch (url1)
-        .then (function(response){
-            return response.json()
-        })
-        .then (data => {
-            console.log(data)//change to return
-               for(beer in beers){ //loops through the property of an object
-               const name = data.name
-               console.log(name)
-               const tagline= data.tagline
-               console.log(tagline)
-                const description = data.description
-                console.log(description)
-                const image_url = data.image_url
-                console.log (image_url)
-                const {ingredients} = data //ingredients is an object and the following are objects within an object
-                const malt = ingredients.malt
-                console.log(malt)
-                const hops = ingredients.hops
-                console.log(hops)
-                const food_pairing = data.food_pairing
-                console.log(food_pairing)
-                const brewers_tips = data.brewers_tips
-                console.log(brewers_tips)
-                }
-            })
-         })
-
-
- //Brewery Search (text)
- searchBtn.addEventListener('click', ()=>{
-   let searchText = searchByText.value
-    const url2 = `https://api.openbrewerydb.org/breweries/search?query=dog=${searchText}` 
-        console.log(url2)
-          fetch (url2)
-            .then (function(response){
-                return response.json()
-                    })
-                .then (data => {
-                    console.log(data)//change to return
-                 const name = data.name
-                     console.log(name)
-                const type = data.brewery_type
-                     console.log(type)
-                const street =data.street
-                    console.log(street) 
-                const city = data.city
-                    console.log (city)
-                const state= data.state
-                     console.log(state)
-                const zip= data.postal_code
-                    console.log(zip)
-                const country= data.country
-                     console.log(country) 
-                const phone= data.phone
-                    console.log(phone)
-                const website= data.website_url
-                    console.log(website)
-                            
-              })      
-            })
                      
     searchBtn.addEventListener('click', ()=>{
+        const url1 = `https://api.punkapi.com/v2/beers?foods`
+        const url2 = `https://api.openbrewerydb.org/breweries/search?query=dog`
+
         Promise.all([url1, url2])
-             .then(values => Promise.all(values.map(value=>value.json())))
+             .then(values => Promise.all(values.map(function (value) {
+                     return value.json()
+                 })))
              .then(finalVals =>{
-             let url1 = finalVals[0]
-             let url2 = finalVals[1]
+                 let url1 = finalVals[0];
+                let url2 = finalVals[1];
              renderHTML(url1, url2)
              
              })
-    })
+            
+            })
+    
         
+          
