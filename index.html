@@ -26,13 +26,9 @@
                   <a href="#" class="fa fa-facebook"></a>
                   <a href="#" class="fa fa-twitter"></a>
                   <a href="#" class="fa fa-youtube"></a>
-
-                  <!-- <a class="nav-link" id = "homeBtn" href="#"> Home <span class="sr-only">(current)</span></a>
-                  <a class="nav-link" id = "beerPairButton" href="#"> Beer & Pairings</a>
-                  <a class="nav-link" id = "brewerysearchButton2" href="#">Brewery Search</a> -->
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-lg-2" type="searchInput" id= "pairings" placeholder="Beer & Food Search">
-                <button class="btn btn my-2 my-sm-0" id = "searchBtn"type="submit">Search</button>
+                  <form class="form">
+                <input class="form-control mr-lg-2" type="searchInput" id= "pairings" placeholder="Brewery Search">
+                <button id = "brewerySearchBtn" type="submit"><h2>Brewery Locator</h2></button>
               </form>
               </div>
             </div>
@@ -44,14 +40,25 @@
             <div class= "content-container">
               <button id= "beerPairBtn"><h2>Beers & Pairings</h2></button>
               <img class= beerimg></img>
-              <div id="beerPair">Looking to pair delicious food with your favorite brew?</div>
-              <p id= "displayBP">Text Here</p>
+              <div id="beerPair"><h3>Looking to pair delicious food with your favorite brew?</h3></div>
+              <p id= "displayBP"></p>
           </div>
-          </section>
-        <section id="brewerylocator" class = "frames brewerylocator">
-          <button id = "brewerySearchBtn"><h2>Brewery Locator</h2></button>
-          <div id="locatebrewery">Looking to Search for your Local Brewery?</div>
-          <p class= "beerlocator">Text Here</p>
+        </section>
+          <!-- <section id= recipes> 
+            <div>
+            <form class="form">
+              <input class="form-control mr-lg-2" type="searchInput" id= "recipes" placeholder="Recipe Search">
+              <button id = "recipeSearchBtn" type="submit"><h2>Recipe Search</h2></button>
+            </form>
+            <div id="recipePair"><h3>Looking for dish to compliment your brew?</h3></div>
+            <p id= "recipesToPair"></p>
+            </div>
+            </section>
+          </section> -->
+          <form class="form-inline my-2 my-lg-0"></form>
+          <section id="brewerylocator" class = "frames brewerylocator">
+          <div id="locatebrewery"><h3>Looking to Search for your Local Brewery?</h3></div>
+          <p id= "beerLocator"></p>
         </section>
       </div>
 </body>

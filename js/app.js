@@ -1,29 +1,23 @@
 /*-------------Variables----------------*/
   var beers= []
 
-  let firstAPICallBP = fetch("https://api.punkapi.com/v2/beers/random")
-  let secondAPICallBrew = fetch("https://api.openbrewerydb.org/breweries/")
+ let image = ""
 
-  
-  
- 
   /*------------Cached Element References------*/
  //Buttons
-  const beerPairBtn = document.getElementById('beerPairBtn')
-  const brewerySearch = document.getElementById('brewerySearchBtn')
-  const searchBtn =document.getElementById('searchBtn')
-  const searchByText = document.getElementById('pairings')
+  const beerPairBtn = document.getElementById('beerPairBtn') //Beers & Pairings Button
+  const brewerySearch = document.getElementById('brewerySearchBtn')//Brewery Button
+  const recipeSearchBtn = document.getElementById('recipeSearchBtn')//Recipe Search Button
+
+  //Search Bars
+  const searchByText = document.getElementById('pairings') //Brewey Search Bar
+  const searchForRecipes= document.getElementById('recipes') //Recipe Search Bar
  
-  let displayBP= document.getElementById('displayBP')
-/*--------------Functions---------------*/
-function renderHTML (firstAPIResponse, secondAPIResponse){
-    document.querySelector('container').innerHTML=`<p>${firstAPIResponse.info} : ${secondAPIResponse}</p>`
-}
+  //Container
+  let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
+  let displayBL= document.getElementById('beerLocator') //Brewery Locator Container
+  let displayR = document.getElementById('recipesToPair')//Recipe Container
 
-// function reneder(beer){
-
-//     document.getElementById('container').innerHTML= `<p>${beer}</p>`
-// }
 
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
@@ -53,7 +47,7 @@ fetch("https://api.punkapi.com/v2/beers/random")
             const brewers_tips = data[beers].brewers_tips
             console.log(brewers_tips)
           
-           displayBP.innerHTML = `<p><h3> Name: ${name}</h3> "${tagline}" </p>, <p> Beer Description:${description}</p>,<p>Food Pairing Options: ${food_pairing}</p>, <p> Brew Tips: ${brewers_tips} </p>`   
+           displayBP.innerHTML = `<p><h3 class= "name"> Craft Beer: ${name}</h3><h4 class= "tagline"> ${tagline} </h4></p><img class= "beerImage" src="${image_url}"/><p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p><p><h4 class ="brewTips"> Brew Tips:</h4> ${brewers_tips}</p><p class ="foodOptions"><h4 class ="foodOptionsTitle">Food Pairing Options:</h4><h5 class= "food"> ${food_pairing}</h5></p>`   
         }
 
     })   
@@ -62,11 +56,45 @@ fetch("https://api.punkapi.com/v2/beers/random")
         })
     })
 
+// //Recipe Search
+
+// recipeSearchBtn.addEventListener('click', ()=>{
+//     let txtSearch = searchByText.value
+
+//     fetch(`http://www.recipepuppy.com/api/?q=${txtSearch}`)
+//         .then (function(response){
+//             return response.json()
+//         })
+//         .then (data => {
+//             console.log(data)//change to return
+//             for(beers in data){ 
+//                 const title = data[beers].title
+//                 console.log(title)
+//                  const href = data[beers].href
+//                  console.log(href)
+//                  const ingredients =data[beers].ingredients
+//                  console.log(ingredients) 
+//                  const thumbnail = data[beers].thumbnail
+//                  console.log (thumbnail)
+             
+                
+//                 displayR.innerHTML =`<p><h3>Dish: ${title}</h3><img>${thumbnail}</img></p><p>Website: ${href}</p><p>Ingredients: ${ingredients}</p>`
+                
+                 
+//             }
+//         })
+//                 .catch((err)=>{
+//                     console.log(err)
+//                 })
+// })
+
+
 //Brewery Search
 
 brewerySearchBtn.addEventListener('click', ()=>{
+    let txtSearch = searchByText.value
 
-    fetch("https://api.openbrewerydb.org/breweries/")
+    fetch(`https://api.openbrewerydb.org/breweries/search?query=${txtSearch}`)
         .then (function(response){
             return response.json()
         })
@@ -92,32 +120,16 @@ brewerySearchBtn.addEventListener('click', ()=>{
                  const website= data[beers].website_url
                  console.log(website)
              
+                
+                displayBL.innerHTML =`<p><h3>${name}</h3></p><p>Address: ${street}</p><p>${city}, ${state} ${zip} ${country}</p><p>Phone: ${phone}</p><p>Website : ${website}</p>`
+                
+                 
             }
-            render(beers)
         })
                 .catch((err)=>{
                     console.log(err)
                 })
 })
 
-//----Search Bar Request----//
-                     
-    searchBtn.addEventListener('click', ()=>{
-        const url1 = `https://api.punkapi.com/v2/beers?foods`
-        const url2 = `https://api.openbrewerydb.org/breweries/search?query=dog`
 
-        Promise.all([url1, url2])
-             .then(values => Promise.all(values.map(function (value) {
-                     return value.json()
-                 })))
-             .then(finalVals =>{
-                 let url1 = finalVals[0];
-                let url2 = finalVals[1];
-             renderHTML(url1, url2)
-             
-             })
-            
-            })
-    
-        
           
