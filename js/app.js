@@ -7,16 +7,15 @@
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn') //Beers & Pairings Button
   const brewerySearch = document.getElementById('brewerySearchBtn')//Brewery Button
-  const recipeSearchBtn = document.getElementById('recipeSearchBtn')//Recipe Search Button
+  const triviaBtn = document.getElementById('triviaSearchBtn')//Trivia Search Button
 
   //Search Bars
   const searchByText = document.getElementById('pairings') //Brewey Search Bar
-  const searchForRecipes= document.getElementById('recipes') //Recipe Search Bar
  
   //Container
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
   let displayBL= document.getElementById('beerLocator') //Brewery Locator Container
-  let displayR = document.getElementById('recipesToPair')//Recipe Container
+  let displayT = document.getElementById('trivia')//Trivia Container
 
 
   /*----------------Event Listeners------------*/
@@ -47,7 +46,12 @@ fetch("https://api.punkapi.com/v2/beers/random")
             const brewers_tips = data[beers].brewers_tips
             console.log(brewers_tips)
           
-           displayBP.innerHTML = `<p><h3 class= "name"> Craft Beer: ${name}</h3><h4 class= "tagline"> ${tagline} </h4></p><img class= "beerImage" src="${image_url}"/><p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p><p><h4 class ="brewTips"> Brew Tips:</h4> ${brewers_tips}</p><p class ="foodOptions"><h4 class ="foodOptionsTitle">Food Pairing Options:</h4><h5 class= "food"> ${food_pairing}</h5></p>`   
+           displayBP.innerHTML = `<p><h3 class= "name"> Craft Beer: ${name}</h3>
+           <h4 class= "tagline"> ${tagline} </h4></p>
+           <img class= "beerImage" src="${image_url}"/>
+           <p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p>
+           <p class= "brewT"><h4 class ="brewTips"> Brew Tips:</h4> ${brewers_tips}</p>
+           <p class ="foodOptions"><h4 class ="foodOptionsTitle">Food Pairing Options:</h4><h5 class= "food"> ${food_pairing}</h5></p>`   
         }
 
     })   
@@ -56,37 +60,28 @@ fetch("https://api.punkapi.com/v2/beers/random")
         })
     })
 
-// //Recipe Search
-
-// recipeSearchBtn.addEventListener('click', ()=>{
-//     let txtSearch = searchByText.value
-
-//     fetch(`http://www.recipepuppy.com/api/?q=${txtSearch}`)
-//         .then (function(response){
-//             return response.json()
-//         })
-//         .then (data => {
-//             console.log(data)//change to return
-//             for(beers in data){ 
-//                 const title = data[beers].title
-//                 console.log(title)
-//                  const href = data[beers].href
-//                  console.log(href)
-//                  const ingredients =data[beers].ingredients
-//                  console.log(ingredients) 
-//                  const thumbnail = data[beers].thumbnail
-//                  console.log (thumbnail)
-             
-                
-//                 displayR.innerHTML =`<p><h3>Dish: ${title}</h3><img>${thumbnail}</img></p><p>Website: ${href}</p><p>Ingredients: ${ingredients}</p>`
-                
-                 
-//             }
-//         })
-//                 .catch((err)=>{
-//                     console.log(err)
-//                 })
-// })
+//Trivia Search
+triviaBtn.addEventListener('click', ()=>{
+    fetch(`http://jservice.io/api/clues?category=430`)
+    .then (function(response){
+        console.log (response.json())
+    })
+    .then (data => {
+        console.log(data)//change to return
+        for(beers in data){ 
+            const question = data[beers].question
+            console.log(question)
+             const answer = data[beers].answer
+             console.log(answer)
+              
+               displayBP.innerHTML = `<p><h3>Questions: ${question}</h3></p><p class= "answer"> Answer: ${answer}</p>` 
+            }
+    
+        })   
+            .catch((err)=>{
+                console.log(err)
+            })
+        })
 
 
 //Brewery Search
@@ -132,4 +127,8 @@ brewerySearchBtn.addEventListener('click', ()=>{
 })
 
 
-          
+
+        
+        
+        
+        
