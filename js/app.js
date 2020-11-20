@@ -1,24 +1,36 @@
 /*-------------Variables----------------*/
   const beers= []
 
+  let firstAPICallBP = fetch("https://api.punkapi.com/v2/beers/random")
+  let secondAPICallBrew = fetch("https://api.openbrewerydb.org/breweries/")
+  
+ 
   /*------------Cached Element References------*/
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn')
-  const brewerySearch = document.getElementById('brewerysearchBtn')
+  const brewerySearch = document.getElementById('brewerySearchBtn')
   const searchBtn =document.getElementById('searchBtn')
   const searchByText = document.getElementById('pairings')
  
-/*----------------Event Listeners------------*/
+/*--------------Functions---------------*/
+function renderHTML (firstAPIResponse, secondAPIResponse){
+    document.querySelector('container').innerHTML=`<p>${firstAPIResponse.info} : ${secondAPIResponse}</p>`
+}
+
+function reneder(theAPI){
+    document.getElementById('container').innerHTML= `<p>${theAPI}</p>`
+}
+
+  /*----------------Event Listeners------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
-
 fetch("https://api.punkapi.com/v2/beers/random")
     .then (function(response){
         return response.json()
     })
     .then (data => {
-        console.log(data)//change to return
-           for(beer in beers){ //loops through the property of an object
+        console.log (data)//change to return
+        //    for(beer in beers){ //loops through the property of an object
            const name = data[0].name
            console.log(name)
            const tagline= data[0].tagline
@@ -37,18 +49,54 @@ fetch("https://api.punkapi.com/v2/beers/random")
             const brewers_tips = data[0].brewers_tips
             console.log(brewers_tips)
             
-             
-        document.getElementById('beerPair').innerHTML += beers
-            }
+            render(firstAPICallBP)
+    })
+
+
+//Brewery Search
+
+brewerySearchBtn.addEventListener('click', ()=>{
+
+    fetch("https://api.openbrewerydb.org/breweries/")
+        .then (function(response){
+            return response.json()
         })
-     })
-//Beer & Food Search  (Text Search)
+        .then (data => {
+            console.log(data)//change to return
+                const name = data.name
+                console.log(name)
+                 const type = data.brewery_type
+                 console.log(type)
+                 const street =data.street
+                 console.log(street) 
+                 const city = data.city
+                 console.log (city)
+                 const state= data.state
+                 console.log(state)
+                 const zip= data.postal_code
+                 console.log(zip)
+                 const country= data.country
+                 console.log(country) 
+                 const phone= data.phone
+                 console.log(phone)
+                 const website= data.website_url
+                 console.log(website)
+                
+                 renederMe(secondAPICallBrew)
+               })      
+    
+            })
+         })
+
+//----Search Bar Request----//
+
+//Beer & Food Search (Text Search)
 
 searchBtn.addEventListener('click', ()=>{
 let searchText = searchByText.value
-    const url = `https://api.punkapi.com/v2/beers?foods=${searchText}`
-    console.log(url)
-    fetch (url)
+    const url1 = `https://api.punkapi.com/v2/beers?foods=${searchText}`
+    console.log(url1)
+    fetch (url1)
         .then (function(response){
             return response.json()
         })
@@ -72,48 +120,52 @@ let searchText = searchByText.value
                 console.log(food_pairing)
                 const brewers_tips = data.brewers_tips
                 console.log(brewers_tips)
-                
-                 
-            document.getElementById('beerPair').innerHTML += beers
                 }
             })
          })
 
-//Brewery Search
 
-brewerysearchBtn.addEventListener('click', ()=>{
-
-    fetch("https://api.openbrewerydb.org/breweries/")
-        .then (function(response){
-            return response.json()
-        })
-        .then (data => {
-            console.log(data)//change to return
-               for(beer in beers){ //loops through the property of an object
-                const name = data.name
-                console.log(name)
-                 const type = data.brewery_type
-                 console.log(type)
-                 const street =data.street
-                 console.log(street) 
-                 const city = data.city
-                 console.log (city)
-                 const state= data.state
-                 console.log(state)
-                 const zip= data.postal_code
-                 console.log(zip)
-                 const country= data.country
-                 console.log(country) 
-                 const phone= data.phone
-                 console.log(phone)
-                 const website= data.website_url
-                 console.log(website)
-                
-                 
-            document.getElementById('beerPair').innerHTML += beers
-               }      
-    
+ //Brewery Search (text)
+ searchBtn.addEventListener('click', ()=>{
+   let searchText = searchByText.value
+    const url2 = `https://api.openbrewerydb.org/breweries/search?query=dog=${searchText}` 
+        console.log(url2)
+          fetch (url2)
+            .then (function(response){
+                return response.json()
+                    })
+                .then (data => {
+                    console.log(data)//change to return
+                 const name = data.name
+                     console.log(name)
+                const type = data.brewery_type
+                     console.log(type)
+                const street =data.street
+                    console.log(street) 
+                const city = data.city
+                    console.log (city)
+                const state= data.state
+                     console.log(state)
+                const zip= data.postal_code
+                    console.log(zip)
+                const country= data.country
+                     console.log(country) 
+                const phone= data.phone
+                    console.log(phone)
+                const website= data.website_url
+                    console.log(website)
+                            
+              })      
             })
-         })
-    
+                     
+    searchBtn.addEventListener('click', ()=>{
+        Promise.all([url1, url2])
+             .then(values => Promise.all(values.map(value=>value.json())))
+             .then(finalVals =>{
+             let url1 = finalVals[0]
+             let url2 = finalVals[1]
+             renderHTML(url1, url2)
+             
+             })
+    })
         

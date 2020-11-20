@@ -44,11 +44,30 @@ body{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
 }
+#brewerySearchBtn{
+    border-radius: 10px;
+    background-color: #d5b06c;
+}
+#brewerySearchBtn:hover{
+    box-shadow: 10px 10px 100px 0px #F3F0E8;
+    text-shadow: 100px 100px 100px 0ox #F3F0E8;
+}
 
-/* .description{
-    font-family:'Montserrat Subrayada', cursive; 
-    color: #a63c06; 
-} */
+#beerPairBtn{
+    border-radius: 10px;
+    background-color: #d5b06c;
+   
+}
+#beerPairBtn:hover{
+    box-shadow: 10px 10px 100px 0px #F3F0E8;
+    text-shadow: 100px 100px 100px 0ox #F3F0E8;
+}
+
+.fa{
+    display:flex;
+    font-size: 20px;
+    flex-direction: row-reverse;
+}
 
 #brewerylocator{
     background-color: #F3F0E8;
@@ -75,20 +94,12 @@ body{
     margin: 0;
     font-weight: bold;
     justify-content: space-around;
+    flex-direction: column;
     width: 100%;
     padding: 0;
     align-content:center;  
 }
 
-/* .nav-link{
-    font-size: 22px;
-    color: #a63c06;
-   text-shadow:2px 2px 2px  #F3F0E8;
-} */
-
-/* .btn{
-    color: #a63c06;
-} */
 #pairings{
     font-size: 30px; 
 }
@@ -99,9 +110,9 @@ body{
     text-shadow: 10px 20px 50px #F3F0E8; 
     font-size: 30px; 
     color: #a63c06;
-    transition: background-color .10s ease;
-    
+    transition: background-color .5s ease;
 }
+
 .btn.btn:hover {
 box-shadow: 50px 10px 60px 0px #F3F0E8;
 }
