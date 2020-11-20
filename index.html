@@ -16,17 +16,17 @@
 <body>
     <div role="nav">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">🍺 </a>
+            <a id = 'beermug' class="navbar-brand" href="#">🍺 </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" id = "homeBtn" href="#"> Home <span class="sr-only">(current)</span></a>
+                  <!-- <a class="nav-link" id = "homeBtn" href="#"> Home <span class="sr-only">(current)</span></a>
                   <a class="nav-link" id = "beerPairButton" href="#"> Beer & Pairings</a>
-                  <a class="nav-link" id = "brewerysearchButton2" href="#">Brewery Search</a>
+                  <a class="nav-link" id = "brewerysearchButton2" href="#">Brewery Search</a> -->
               <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="searchInput" placeholder="Beer & Food Search">
+                <input class="form-control mr-lg-2" type="searchInput" id= "pairings" placeholder="Beer & Food Search">
                 <button class="btn btn my-2 my-sm-0" id = "searchBtn"type="submit">Search</button>
               </form>
               </div>
@@ -37,14 +37,14 @@
       <div id="container">
           <section id="beerpairings" class= "frames beerpairings">
             <div class= "content-container">
-              <button id= "beerPairBtn"><h2>Beer & Pairings</h2></button>
+              <button id= "beerPairBtn"><h2>Beers & Pairings</h2></button>
               <img class= beerimg></img>
-              <div id="beerPair"></div>
+              <div id="beerPair">Looking to pair delicious food with your favorite brew?</div>
           </div>
           </section>
         <section id="brewerylocator" class = "frames brewerylocator">
           <button id = "brewerysearchBtn"><h2>Brewery Locator</h2></button>
-          <div id="locatebrewery"></div>
+          <div id="locatebrewery">Looking to Search for your Local Brewery?</div>
         </section>
       </div>
 </body>

@@ -5,8 +5,10 @@
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn')
   const brewerySearch = document.getElementById('brewerysearchBtn')
+  const searchBtn =document.getElementById('searchBtn')
+  const searchByText = document.getElementById('pairings')
  
-
+/*----------------Event Listeners------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
 
@@ -38,12 +40,45 @@ fetch("https://api.punkapi.com/v2/beers/random")
              
         document.getElementById('beerPair').innerHTML += beers
             }
-                
-
         })
      })
+//Beer & Food Search  (Text Search)
 
-   
+searchBtn.addEventListener('click', ()=>{
+let searchText = searchByText.value
+    const url = `https://api.punkapi.com/v2/beers?foods=${searchText}`
+    console.log(url)
+    fetch (url)
+        .then (function(response){
+            return response.json()
+        })
+        .then (data => {
+            console.log(data)//change to return
+               for(beer in beers){ //loops through the property of an object
+               const name = data.name
+               console.log(name)
+               const tagline= data.tagline
+               console.log(tagline)
+                const description = data.description
+                console.log(description)
+                const image_url = data.image_url
+                console.log (image_url)
+                const {ingredients} = data //ingredients is an object and the following are objects within an object
+                const malt = ingredients.malt
+                console.log(malt)
+                const hops = ingredients.hops
+                console.log(hops)
+                const food_pairing = data.food_pairing
+                console.log(food_pairing)
+                const brewers_tips = data.brewers_tips
+                console.log(brewers_tips)
+                
+                 
+            document.getElementById('beerPair').innerHTML += beers
+                }
+            })
+         })
+
 //Brewery Search
 
 brewerysearchBtn.addEventListener('click', ()=>{
@@ -76,9 +111,9 @@ brewerysearchBtn.addEventListener('click', ()=>{
                 
                  
             document.getElementById('beerPair').innerHTML += beers
-                }
-                    
+               }      
     
             })
          })
     
+        
