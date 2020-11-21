@@ -118,7 +118,11 @@ h4{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
 }
-
+h3.questionAnswer{
+    color: black;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+}
 #triviaAnswerBtn{
     border-radius: 10px;
     background-color: #d5b06c;
@@ -131,6 +135,7 @@ h4{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
 }
+
 .navbar {
     align-content: space-between;   
     font-family:'Architects Daughter', cursive; 

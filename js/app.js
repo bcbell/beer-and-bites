@@ -1,5 +1,6 @@
 /*-------------Variables----------------*/
-  var beers= []
+  let beers= []
+  let randomBeerTrivia =[]
 
   /*------------Cached Element References------*/
  //Buttons
@@ -67,10 +68,10 @@ triviaBtn.addEventListener('click', ()=>{
     .then (data => {
         console.log(data)//change to return
         for(beers in data){ 
-             const question = data[0].question
+             const question = data[0,1,2,3,4].question
              console.log(question)
               
-               displayT.innerHTML = `<p><h3> ${question}</h3></p>`
+               displayT.innerHTML = `<p class= "question" ><h3 class = "questionAnswer"> ${question}</h3></p>`
             }  
 })   
             .catch((err)=>{
@@ -86,11 +87,12 @@ triviaBtn.addEventListener('click', ()=>{
             })
             .then (data => {
                 console.log(data)//change to return
-                for(beers in data){ 
-                    const answer = data[0].answer
-                    console.log(answer)
+                for(beers in data){  
+                    const answer = Math.floor(Math.random() * data[beers].value +1)
+                    const newAnswer= data[answer].answer
+                    console.log(newAnswer)
                  
-                     displayT.innerHTML=`<p class= "answer"> ${answer}</p>` 
+                     displayT.innerHTML=`<p class= "answer"><h3 class= questionAnswer> ${newAnswer}</h3></p>` 
                     
                     }  
         })   
