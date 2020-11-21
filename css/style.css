@@ -38,11 +38,9 @@ body{
 
 #beerpairings{
     background-color:#F3F0E8;
-    font-family:'Montserrat Subrayada', cursive; 
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
-    outline: #a63c06 solid;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F3F0E8;  
+    outline: #a63c06 solid; 
 }
 #brewerySearchBtn{
     border-radius: 10px;
@@ -56,11 +54,26 @@ body{
 #beerPairBtn{
     border-radius: 10px;
     background-color: #d5b06c;
+    font-family:'Montserrat Subrayada', cursive; 
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #F3F0E8; 
+   
    
 }
 #beerPairBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
+}
+.beerimg{
+    padding:10px;
+    width: 50%;;
+    image-rendering: auto;
+    height: 20px;
+}
+
+.beerImage{ 
+    width: 20%;
+    height: auto; 
 }
 
 .fa{
@@ -71,11 +84,39 @@ body{
 
 #brewerylocator{
     background-color: #F3F0E8;
-    font-family:'Montserrat Subrayada', cursive; 
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
+    font-weight: bolder;
     outline: #a63c06 solid;
+}
+
+h4{
+   color: black;
+   font-family: 'Abril Fatface', cursive;
+   
+   
+}
+
+#triviaSection{
+    background-color: #F3F0E8;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #a63c06;
+    font-size: 15px;
+    outline: #a63c06 solid;
+    
+}
+
+#triviaSearchBtn{
+    border-radius: 10px;
+    background-color: #d5b06c;
+    font-family:'Montserrat Subrayada', cursive; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
+   
+}
+#triviaSearchBtn:hover{
+    box-shadow: 10px 10px 100px 0px #F3F0E8;
+    text-shadow: 100px 100px 100px 0ox #F3F0E8;
 }
 
 .navbar {
@@ -98,6 +139,10 @@ body{
     width: 100%;
     padding: 0;
     align-content:center;  
+}
+.name{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 25px;
 }
 
 #pairings{
@@ -131,10 +176,11 @@ box-shadow: 50px 10px 60px 0px #F3F0E8;
         grid-template-columns: repeat(2, 3fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
+        brewerylocator brewerylocator
         beepairings brewerylocator 
-        beerpairings brewerylocator 
-        beerpairings brewerylocator
-        beerpairings brewerylocator ;
+        beerpairings trivia
+        beerpairings trivia
+         ;
     }
 
 
@@ -142,19 +188,27 @@ box-shadow: 50px 10px 60px 0px #F3F0E8;
         grid-area: beerpairing;
         padding: 10px 0px 10px 0;
         grid-column: 1;
-        grid-row: 3/ span 22;
+        grid-row: 6/ span 22;
         margin: 0 0px 0 20px;
         text-align: center;
 
     }
-
     #brewerylocator{
         grid-area: brewerylocator;
         padding: 10px 0 0 10px;
-        grid-column: 2;
-        grid-row: 3/ span 22 ;
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 5;
         margin: 0 10px 0 10px;
         text-align: center;
     }
+    #triviaSection{
+        grid-area: brewerylocator;
+        padding: 10px 0 0 10px;
+        grid-column: 2;
+        grid-row: 6/ span 22 ;
+        margin: 0 10px 0 10px;
+        text-align: center;
+    }
+    
     
 }

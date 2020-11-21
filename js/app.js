@@ -1,8 +1,6 @@
 /*-------------Variables----------------*/
   var beers= []
 
- let image = ""
-
   /*------------Cached Element References------*/
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn') //Beers & Pairings Button
@@ -46,7 +44,7 @@ fetch("https://api.punkapi.com/v2/beers/random")
             const brewers_tips = data[beers].brewers_tips
             console.log(brewers_tips)
           
-           displayBP.innerHTML = `<p><h3 class= "name"> Craft Beer: ${name}</h3>
+           displayBP.innerHTML = `<p><h5 class= "name"> ${name}</h5></p>
            <h4 class= "tagline"> ${tagline} </h4></p>
            <img class= "beerImage" src="${image_url}"/>
            <p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p>
@@ -62,19 +60,20 @@ fetch("https://api.punkapi.com/v2/beers/random")
 
 //Trivia Search
 triviaBtn.addEventListener('click', ()=>{
-    fetch(`http://jservice.io/api/clues?category=430`)
+    fetch('http://jservice.io/api/random')
     .then (function(response){
-        console.log (response.json())
+        return (response.json())
     })
     .then (data => {
         console.log(data)//change to return
         for(beers in data){ 
-            const question = data[beers].question
-            console.log(question)
-             const answer = data[beers].answer
-             console.log(answer)
+            const answer = data[beers].answer
+            console.log(answer)
+             const question = data[beers].question
+             console.log(question)
               
-               displayBP.innerHTML = `<p><h3>Questions: ${question}</h3></p><p class= "answer"> Answer: ${answer}</p>` 
+               displayT.innerHTML = `<p><h3>Questions: ${question}</h3></p>`
+            //    <p class= "answer"> Answer: ${"answer"}</p>` 
             }
     
         })   
@@ -116,7 +115,7 @@ brewerySearchBtn.addEventListener('click', ()=>{
                  console.log(website)
              
                 
-                displayBL.innerHTML =`<p><h3>${name}</h3></p><p>Address: ${street}</p><p>${city}, ${state} ${zip} ${country}</p><p>Phone: ${phone}</p><p>Website : ${website}</p>`
+                displayBL.innerHTML =`<p><h4>${name}</h4></p><p>Address: ${street}</p><p>${city}, ${state} ${zip} ${country}</p><p>Phone: ${phone}</p><p>Website : ${website}</p>`
                 
                  
             }
