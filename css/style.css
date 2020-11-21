@@ -106,7 +106,7 @@ h4{
     
 }
 
-#triviaSearchBtn{
+#triviaQuestionBtn{
     border-radius: 10px;
     background-color: #d5b06c;
     font-family:'Montserrat Subrayada', cursive; 
@@ -114,11 +114,23 @@ h4{
     -webkit-text-stroke-color: #F3F0E8;  
    
 }
-#triviaSearchBtn:hover{
+#triviaQuestionBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
 }
 
+#triviaAnswerBtn{
+    border-radius: 10px;
+    background-color: #d5b06c;
+    font-family:'Montserrat Subrayada', cursive; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F3F0E8;  
+   
+}
+#triviaAnswerBtn:hover{
+    box-shadow: 10px 10px 100px 0px #F3F0E8;
+    text-shadow: 100px 100px 100px 0ox #F3F0E8;
+}
 .navbar {
     align-content: space-between;   
     font-family:'Architects Daughter', cursive; 
@@ -149,7 +161,7 @@ h4{
     font-size: 30px; 
 }
 
-.btn.btn{
+/* .triviaQuestionBtn{
     outline: #8a4622 solid;
     background-color: #eeba0b;
     text-shadow: 10px 20px 50px #F3F0E8; 
@@ -159,8 +171,8 @@ h4{
 }
 
 .btn.btn:hover {
-box-shadow: 50px 10px 60px 0px #F3F0E8;
-}
+box-shadow: 50px 10px 60px 0px #F3F0E8; */
+/* } */
 @media only screen and (min-width: 260px){
     .navbar{
         width: 100%;

@@ -5,7 +5,8 @@
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn') //Beers & Pairings Button
   const brewerySearch = document.getElementById('brewerySearchBtn')//Brewery Button
-  const triviaBtn = document.getElementById('triviaSearchBtn')//Trivia Search Button
+  const triviaBtn = document.getElementById('triviaQuestionBtn')//Trivia Question Button
+  const triviaAnswerBtn = document.getElementById('triviaAnswerBtn')
 
   //Search Bars
   const searchByText = document.getElementById('pairings') //Brewey Search Bar
@@ -14,7 +15,6 @@
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
   let displayBL= document.getElementById('beerLocator') //Brewery Locator Container
   let displayT = document.getElementById('trivia')//Trivia Container
-
 
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
@@ -58,31 +58,49 @@ fetch("https://api.punkapi.com/v2/beers/random")
         })
     })
 
-//Trivia Search
+//Trivia Question Button
 triviaBtn.addEventListener('click', ()=>{
-    fetch('http://jservice.io/api/random')
+    fetch('http://jservice.io/api/clues?category=430')
     .then (function(response){
         return (response.json())
     })
     .then (data => {
         console.log(data)//change to return
         for(beers in data){ 
-            const answer = data[beers].answer
-            console.log(answer)
-             const question = data[beers].question
+             const question = data[0].question
              console.log(question)
               
-               displayT.innerHTML = `<p><h3>Questions: ${question}</h3></p>`
-            //    <p class= "answer"> Answer: ${"answer"}</p>` 
-            }
-    
-        })   
+               displayT.innerHTML = `<p><h3> ${question}</h3></p>`
+            }  
+})   
             .catch((err)=>{
                 console.log(err)
             })
         })
 
+//Trivia Answer Button
+        triviaAnswerBtn.addEventListener('click', ()=>{
+            fetch('http://jservice.io/api/clues?category=430')
+            .then (function(response){
+                return (response.json())
+            })
+            .then (data => {
+                console.log(data)//change to return
+                for(beers in data){ 
+                    const answer = data[0].answer
+                    console.log(answer)
+                 
+                     displayT.innerHTML=`<p class= "answer"> ${answer}</p>` 
+                    
+                    }  
+        })   
+                    .catch((err)=>{
+                        console.log(err)
+                    })
+                })
 
+            
+  
 //Brewery Search
 
 brewerySearchBtn.addEventListener('click', ()=>{
