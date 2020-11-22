@@ -57,9 +57,8 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
      -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: #F3F0E8; 
-   
-   
 }
+
 #beerPairBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
@@ -90,11 +89,31 @@ body{
     outline: #a63c06 solid;
 }
 
+#displayRecipe{
+    background-color:#F3F0E8;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #a63c06;
+    outline: #a63c06 solid; 
+    text-align: left;
+}
+
+#recipeSearchBtn{
+    border-radius: 10px;
+    background-color: #d5b06c;
+    font-family:'Montserrat Subrayada', cursive; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F3F0E8;  
+}
+
+#recipe{
+    font-family:'Architects Daughter', cursive; 
+    font-size: 15px;
+}
+
+
 h4{
    color: black;
    font-family: 'Abril Fatface', cursive;
-   
-   
 }
 
 #triviaSection{
@@ -123,7 +142,7 @@ h3.questionAnswer{
     font-family: 'Abril Fatface', cursive;
     font-size: 20px;
 }
-#triviaAnswerBtn{
+#triviaBtn{
     border-radius: 10px;
     background-color: #d5b06c;
     font-family:'Montserrat Subrayada', cursive; 
@@ -131,11 +150,14 @@ h3.questionAnswer{
     -webkit-text-stroke-color: #F3F0E8;  
    
 }
-#triviaAnswerBtn:hover{
+#triviaBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
 }
-
+#answers{
+    background-color:#d5b06c;
+    
+}
 .navbar {
     align-content: space-between;   
     font-family:'Architects Daughter', cursive; 
@@ -162,22 +184,10 @@ h3.questionAnswer{
     font-size: 25px;
 }
 
-#pairings{
+#brewSearch{
     font-size: 30px; 
 }
 
-/* .triviaQuestionBtn{
-    outline: #8a4622 solid;
-    background-color: #eeba0b;
-    text-shadow: 10px 20px 50px #F3F0E8; 
-    font-size: 30px; 
-    color: #a63c06;
-    transition: background-color .5s ease;
-}
-
-.btn.btn:hover {
-box-shadow: 50px 10px 60px 0px #F3F0E8; */
-/* } */
 @media only screen and (min-width: 260px){
     .navbar{
         width: 100%;
@@ -190,40 +200,47 @@ box-shadow: 50px 10px 60px 0px #F3F0E8; */
     #container {
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
-        brewerylocator brewerylocator
-        beepairings brewerylocator 
-        beerpairings trivia
-        beerpairings trivia
+        brewerylocator brewerylocator brewerylocator
+        beepairings displayRecipe displayRecipe 
+        beerpairings displayRecipe displayRecipe
+        beerpairings trivia trivia
          ;
     }
-
 
     #beerpairings{
         grid-area: beerpairing;
         padding: 10px 0px 10px 0;
         grid-column: 1;
-        grid-row: 6/ span 22;
-        margin: 0 0px 0 20px;
+        grid-row: 6/ span 9;
+        margin: 0 0px 20px 20px;
         text-align: center;
 
     }
     #brewerylocator{
         grid-area: brewerylocator;
         padding: 10px 0 0 10px;
-        grid-column: 1/ span 2;
+        grid-column: 1/ span 3;
         grid-row: 1/ span 5;
         margin: 0 10px 0 10px;
         text-align: center;
     }
+    #displayRecipe{
+        grid-area: displayRecipe;
+        padding: 10px 0px 10px 0;
+        grid-column: 2/ span 3;
+        grid-row: 6/ span 4 ;
+        margin: 0 20px 20px 20px;
+        text-align: center;
+    }
     #triviaSection{
-        grid-area: brewerylocator;
-        padding: 10px 0 0 10px;
-        grid-column: 2;
-        grid-row: 6/ span 22 ;
-        margin: 0 10px 0 10px;
+        grid-area: trivia;
+        padding: 10px 0px 10px 0px;
+        grid-column: 2/ span 3;
+        grid-row: 10 / span 2;
+        margin: 0 20px 20px 20px;
         text-align: center;
     }
     

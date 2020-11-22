@@ -1,21 +1,23 @@
 /*-------------Variables----------------*/
   let beers= []
-  let randomBeerTrivia =[]
+  
 
   /*------------Cached Element References------*/
  //Buttons
   const beerPairBtn = document.getElementById('beerPairBtn') //Beers & Pairings Button
   const brewerySearch = document.getElementById('brewerySearchBtn')//Brewery Button
-  const triviaBtn = document.getElementById('triviaQuestionBtn')//Trivia Question Button
-  const triviaAnswerBtn = document.getElementById('triviaAnswerBtn')
+  const triviaBtn = document.getElementById('triviaBtn')//Trivia Question/Answer Button
+  const recipeSearchBtn = document.getElementById('recipeSearchBtn')
 
   //Search Bars
-  const searchByText = document.getElementById('pairings') //Brewey Search Bar
+  const searchByText = document.getElementById('brewSearch') //Brewey Search Bar
+  const searchRecipes= document.getElementById('recipe')
  
   //Container
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
   let displayBL= document.getElementById('beerLocator') //Brewery Locator Container
   let displayT = document.getElementById('trivia')//Trivia Container
+  let displayR =document.getElementById('displayRecipes')
 
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
@@ -59,40 +61,25 @@ fetch("https://api.punkapi.com/v2/beers/random")
         })
     })
 
-//Trivia Question Button
-triviaBtn.addEventListener('click', ()=>{
-    fetch('http://jservice.io/api/clues?category=430')
-    .then (function(response){
-        return (response.json())
-    })
-    .then (data => {
-        console.log(data)//change to return
-        for(beers in data){ 
-             const question = data[0,1,2,3,4].question
-             console.log(question)
-              
-               displayT.innerHTML = `<p class= "question" ><h3 class = "questionAnswer"> ${question}</h3></p>`
-            }  
-})   
-            .catch((err)=>{
-                console.log(err)
-            })
-        })
 
-//Trivia Answer Button
-        triviaAnswerBtn.addEventListener('click', ()=>{
-            fetch('http://jservice.io/api/clues?category=430')
+//Trivia Question/Answer Button
+        triviaBtn.addEventListener('click', ()=>{
+            fetch('http://jservice.io/api/random')
             .then (function(response){
                 return (response.json())
             })
             .then (data => {
                 console.log(data)//change to return
                 for(beers in data){  
-                    const answer = Math.floor(Math.random() * data[beers].value +1)
-                    const newAnswer= data[answer].answer
-                    console.log(newAnswer)
+                    
+                    const question =data[beers].question
+                    console.log(question)
+                    const answer= data[beers].answer
+                    console.log(answer)
+                   
                  
-                     displayT.innerHTML=`<p class= "answer"><h3 class= questionAnswer> ${newAnswer}</h3></p>` 
+                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p>${answer}</p>` 
+                    
                     
                     }  
         })   
@@ -145,9 +132,42 @@ brewerySearchBtn.addEventListener('click', ()=>{
                 })
 })
 
+//Recipe Search
+
+recipeSearchBtn.addEventListener('click', ()=>{
+    let recipeResults = searchRecipes.value
+    fetch(`http://taco-randomizer.herokuapp.com/random/?full-taco=${recipeResults}`)
+        .then (function(response){
+            return response.json()
+        })
+        .then (data => {
+            console.log(data)//change to return
+            for(beers in data){ 
+               const {base_layer} = data.base_layer
+               const {condiment_url}= data.condiment_url
+               if (beers = base_layer){
+                console.log(base_layer)
+             }else if(beers = condiment_url){
+                 console.log(condiment_url)
+                 
+             }
+                
+               
+               
+                 displayR.innerHTML =`<p><h4>${name}</h4></p><p class ="recipeFinds"><h4>Recipe:</h4>${recipe}</p>`
+                
+                 
+            }
+        })
+                .catch((err)=>{
+                    console.log(err)
+                })
+})
 
 
+
         
         
         
-        
+{/* <p>
+Ingredients: ${condiment}, ${mixin}, ${shell}</p><p> Seasonings: ${seasoning}</p> */}
