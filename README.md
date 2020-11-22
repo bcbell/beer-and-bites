@@ -2,6 +2,16 @@
 
 This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
 
+__DEMO__
+
+Visit  
+
+__APIs__
+Punk API - https://api.punkapi.com/v2/beers/random 
+jService- http://jservice.io/api/random 
+Open Brewery DB- https://api.openbrewerydb.org/
+TacoFancy- http://taco-randomizer.herokuapp.com/
+
 __HTML Setup and Layout__
 1. HTML Boilerplate
 2. Header
@@ -11,37 +21,34 @@ __HTML Setup and Layout__
 3. Body
    - [ x] Div id = "container"
         * Set div tag with id="container" 
-        * Set 2 div tags inside of "frames" for each frame
+        * Set 4 div tags inside of "frames" for each frame
         * Set the header of each frame to h2
    - [x ] Div id = "nav" 
         * Set div tag with id ="nav"
-        * Set 2 button tags inside of "nav" for each button on the navigation bar
+        * Set 1 button tags inside of "nav" for each button on the navigation bar
         * Search 
-    - ~~[ ] Div id = "footer" ~~ no longer adding a footer
-        ~~* Set up div with id= "footer"~~
-       ~~ * Connect each button to its corresponding navigation button ~~
    - [ x] Link to Bootstrap- navigation bar 
 
 __JavaScript Setup and Layout__
 1. Variables
-   - [ ] beerFood
+   - [x ] beerFood
 2. Cached Element Reference
-   - [ ] Establish cached element reference
+   - [ x] Establish cached element reference
         * Each of the 4 buttons
         * Container
         * Navigation Bar
 3. Event Listeners
-    - [ ] Establish event listeners
-        * Each of the 2 buttons
-        * Container
+    - [x ] Establish event listeners
+        * Each of the 4 buttons
+        * Each of the 4 containers
         * Navigation Bar
-        * Search 
+        * Search in navigation (Brewery Search) and the recipe search
 4. Functions
-   - [ ] appendDiv for beerFood
-   - [ ] Setup a function to delete the previous information and search again
-   - [ ] Render 
+   - [ x] Create functions to fetch requested APIs
+   - [ x] Render function results on screen in the desired areas
 
 __CSS Setup and Layout__
+Objective- Design a app that is clean yet functional.
 1. Body
    - [x ] Setup a flex display
    - [ x ] Set background color gradient to top- resemble a beer
@@ -50,6 +57,7 @@ __CSS Setup and Layout__
     - [ x ] Set text to Montserrat Subrayada
     - [ x ] Set font to #a63c06
     - [ x ] Set text size 50px
+    - [ x ] Add image under the title
 3. Nav Bar /Footer
    - [ x] Set background color to #EEBA0B
    - [ x] Set font color to #710000
