@@ -61,32 +61,31 @@ fetch("https://api.punkapi.com/v2/beers/random")
 
 
 //Trivia Question/Answer Button
-        triviaBtn.addEventListener('click', ()=>{
-            fetch('http://jservice.io/api/random')
-            .then (function(response){
-                return (response.json())
+triviaBtn.addEventListener('click', ()=>{
+    fetch('http://jservice.io/api/random')
+    .then (function(response){
+        return (response.json())
+    })
+    .then (data => {
+        console.log(data)//change to return
+        for(beers in data){  
+            const question =data[beers].question
+            console.log(question)
+            const answer= data[beers].answer
+            console.log(answer)
+           
+            displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><button id= "answerBtn"> Answer</button><p class= "trivia_answer">${answer}</p>`
+            }  
+})   
+            .catch((err)=>{
+                console.log(err)
             })
-            .then (data => {
-                console.log(data)//change to return
-                for(beers in data){  
-                    const question =data[beers].question
-                    console.log(question)
-                    const answer= data[beers].answer
-                    console.log(answer)
-                   
-                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p class= "trivia_answer">${answer}</p>`  
-                    }  
-        })   
-                    .catch((err)=>{
-                        console.log(err)
-                    })
-                })
-
-            
+        })
   
 //Brewery Search
 
-brewerySearchBtn.addEventListener('click', ()=>{
+brewerySearchBtn.addEventListener('click', (evt)=>{
+    evt.preventDefault()
     let txtSearch = searchByText.value
 
     fetch(`https://api.openbrewerydb.org/breweries/search?query=${txtSearch}`)
@@ -121,14 +120,15 @@ brewerySearchBtn.addEventListener('click', ()=>{
                  
             }
         })
-                .catch((err)=>{
-                    console.log(err)
+                .catch((error)=>{
+                    console.log('Error', error)
                 })
 })
 
 //Recipe Search
 
-recipeSearchBtn.addEventListener('click', ()=>{
+recipeSearchBtn.addEventListener('click', (evt)=>{
+    evt.preventDefault()
     let recipeResults = searchRecipes.value
     fetch(`http://taco-randomizer.herokuapp.com/random/?full-taco=${recipeResults}`)
         .then (function(response){
@@ -149,10 +149,11 @@ recipeSearchBtn.addEventListener('click', ()=>{
                 }
             
             })     
-                .catch((err)=>{
-                    console.log(err)
+                .catch((error)=>{
+                    console.error('Error:', error)
                 })
 })
+
 
 
 
