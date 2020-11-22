@@ -78,7 +78,7 @@ fetch("https://api.punkapi.com/v2/beers/random")
                     console.log(answer)
                    
                  
-                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p>${answer}</p>` 
+                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p class= "trivia_answer">${answer}</p>` 
                     
                     
                     }  
@@ -149,6 +149,7 @@ recipeSearchBtn.addEventListener('click', ()=>{
                 const recipe = data.recipe
                 console.log(recipe)
 
+
                 displayR.innerHTML =`<p><h4>${name}</h4></p><p><h5>${recipe}</h5></p><p>Con</p>`        
                     
                 }
@@ -164,5 +165,3 @@ recipeSearchBtn.addEventListener('click', ()=>{
         
         
         
-{/* <p>
-Ingredients: ${condiment}, ${mixin}, ${shell}</p><p> Seasonings: ${seasoning}</p> */}

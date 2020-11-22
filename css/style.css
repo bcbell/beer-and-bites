@@ -87,6 +87,7 @@ body{
     color: #a63c06;
     font-weight: bolder;
     outline: #a63c06 solid;
+    padding: ;
 }
 
 #displayRecipe{
@@ -110,7 +111,6 @@ body{
     font-size: 15px;
 }
 
-
 h4{
    color: black;
    font-family: 'Abril Fatface', cursive;
@@ -122,7 +122,6 @@ h4{
     color: #a63c06;
     font-size: 15px;
     outline: #a63c06 solid;
-    
 }
 
 #triviaQuestionBtn{
@@ -169,7 +168,6 @@ h3.questionAnswer{
 }
 
 .navbar-nav{
-    background: #eeba0b;
     color:#a63c06;
     margin: 0;
     font-weight: bold;
@@ -186,6 +184,14 @@ h3.questionAnswer{
 
 #brewSearch{
     font-size: 30px; 
+}
+.header-img{
+   background:url('https://i.imgur.com/WYYD4yL.png') no-repeat center top; 
+   background-size: 15px;
+   width: 100%;
+   height: 300px;
+   margin: 0  0 10px;
+   padding: 0px 20px 15px;
 }
 
 @media only screen and (min-width: 260px){
@@ -221,10 +227,10 @@ h3.questionAnswer{
     }
     #brewerylocator{
         grid-area: brewerylocator;
-        padding: 10px 0 0 10px;
+        padding: 10px 0 10px 0px;
         grid-column: 1/ span 3;
         grid-row: 1/ span 5;
-        margin: 0 10px 0 10px;
+        margin: 0 5px 0 20px;
         text-align: center;
     }
     #displayRecipe{
