@@ -11,7 +11,7 @@
 
   //Search Bars
   const searchByText = document.getElementById('brewSearch') //Brewey Search Bar
-  const searchRecipes= document.getElementById('recipe')
+  const searchRecipes= document.getElementById('recipeForm')
  
   //Container
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
@@ -143,22 +143,17 @@ recipeSearchBtn.addEventListener('click', ()=>{
         .then (data => {
             console.log(data)//change to return
             for(beers in data){ 
-               const {base_layer} = data.base_layer
-               const {condiment_url}= data.condiment_url
-               if (beers = base_layer){
-                console.log(base_layer)
-             }else if(beers = condiment_url){
-                 console.log(condiment_url)
-                 
-             }
-                
-               
-               
-                 displayR.innerHTML =`<p><h4>${name}</h4></p><p class ="recipeFinds"><h4>Recipe:</h4>${recipe}</p>`
-                
-                 
-            }
-        })
+                const {base_layer} = data.base_layer
+                const name = data.name
+                console.log(name)
+                const recipe = data.recipe
+                console.log(recipe)
+
+                displayR.innerHTML =`<p><h4>${name}</h4></p><p><h5>${recipe}</h5></p><p>Con</p>`        
+                    
+                }
+            
+            })     
                 .catch((err)=>{
                     console.log(err)
                 })
