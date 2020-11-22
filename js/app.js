@@ -1,4 +1,4 @@
-/*-------------Variables----------------*/
+/*--------------------Variables----------------*/
   let beers= []
   
 
@@ -19,7 +19,7 @@
   let displayT = document.getElementById('trivia')//Trivia Container
   let displayR =document.getElementById('displayRecipes')
 
-  /*----------------Event Listeners------------*/
+  /*----------------Event Listeners/Functions------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
 fetch("https://api.punkapi.com/v2/beers/random")
@@ -50,9 +50,7 @@ fetch("https://api.punkapi.com/v2/beers/random")
            displayBP.innerHTML = `<p><h5 class= "name"> ${name}</h5></p>
            <h4 class= "tagline"> ${tagline} </h4></p>
            <img class= "beerImage" src="${image_url}"/>
-           <p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p>
-           <p class= "brewT"><h4 class ="brewTips"> Brew Tips:</h4> ${brewers_tips}</p>
-           <p class ="foodOptions"><h4 class ="foodOptionsTitle">Food Pairing Options:</h4><h5 class= "food"> ${food_pairing}</h5></p>`   
+           <p class= "beerDes"><h4 class="beerDesTitle"> Beer Description:</h4>${description}</p><p class= "brewT"><h4 class ="brewTips"> Brew Tips:</h4> ${brewers_tips}</p><p class ="foodOptions"><h4 class ="foodOptionsTitle">Food Pairing Options:</h4><h5 class= "food"> ${food_pairing}</h5></p>`   
         }
 
     })   
@@ -71,16 +69,12 @@ fetch("https://api.punkapi.com/v2/beers/random")
             .then (data => {
                 console.log(data)//change to return
                 for(beers in data){  
-                    
                     const question =data[beers].question
                     console.log(question)
                     const answer= data[beers].answer
                     console.log(answer)
                    
-                 
-                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p class= "trivia_answer">${answer}</p>` 
-                    
-                    
+                    displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p><p>${question}</p><p class= "answer"><h3 class= questionAnswer> Answer:</h3></p><p class= "trivia_answer">${answer}</p>`  
                     }  
         })   
                     .catch((err)=>{
