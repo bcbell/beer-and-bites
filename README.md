@@ -113,3 +113,15 @@ __Future Enhancements__
 8. Improve button display 
 9. Improve site where recipes generate automatically based on pairings options provided
    
+
+__List of Technologies Used:__
+-HTML
+-CSS
+-JavaScript
+-BootStrap
+-Postman
+-APIs (listed above)
+-Google Fonts
+-Wireframe
+-Canva
+-Imgur
