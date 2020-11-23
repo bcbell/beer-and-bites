@@ -264,6 +264,7 @@ p.footerSocial{
     h1{
         justify-content: center;
     }
+
     #container {
         display: grid;
         gap: 20px;

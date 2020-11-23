@@ -99,3 +99,13 @@ __Final__
 ![DemoImage](https://i.imgur.com/L4JH6sd.png)
 
 ![DemoImage](https://i.imgur.com/tZfTp7L.png)
+
+
+__Future Enhancements__
+
+1. Make improvement and update APIs 
+2. Update background color 
+3. Add additional content 
+4. Improve readability of content 
+5. Add navigation bar
+   
