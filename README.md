@@ -89,13 +89,13 @@ Objective- Design a app that is clean yet functional.
 
 __Wireframe__
 
-![Wireframe](/Users/brittanycoleman/code/unit-one-project/images/wireframe.png)
+![Wireframe](https://i.imgur.com/Z7a2scE.png)
 
 
 
 __Final__
 
 
-![DemoImage](/Users/brittanycoleman/code/unit-one-project/images/Final Product ..png)
+![DemoImage]<a href="https://imgur.com/Z7a2scE"><img src="https://i.imgur.com/Z7a2scE.png" title="source: imgur.com" /></a>
 
 ![DemoImage](/Users/brittanycoleman/code/unit-one-project/images/Final Product.png)
