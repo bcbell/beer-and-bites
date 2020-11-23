@@ -107,5 +107,8 @@ __Future Enhancements__
 2. Update background color 
 3. Add additional content 
 4. Improve readability of content 
-5. Add navigation bar
+5. Add navigation buttons and make separate pages/sections for each
+6. Improve search bar design
+7. Improve search functionality 
+8. Improve button display 
    

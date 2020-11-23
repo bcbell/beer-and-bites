@@ -19,7 +19,7 @@
   let displayT = document.getElementById('trivia')//Trivia Container
   let displayR =document.getElementById('displayRecipes')
 
-  /*----------------Event Listeners/Functions------------*/
+  /*----------------Event Listeners------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
 fetch("https://api.punkapi.com/v2/beers/random")
