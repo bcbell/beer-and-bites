@@ -14,7 +14,7 @@ Finally, a random joke is generated when user submits a request using the "Trivi
 
 __DEMO__
 
-Visit  
+For demo, visit http://beers_and_bites.surge.sh/  
 
 __APIs__
 Punk API - https://api.punkapi.com/v2/beers/random 
