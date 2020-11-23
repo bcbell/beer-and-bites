@@ -2,6 +2,16 @@
 
 This project is designed for craft beer and cider enthusiasts! Offering beermaker recipes along with food pairing options for each dish. Also, includes a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers.
 
+__App Overview__
+
+To search for breweries, user will input either name, address, city or zip code into the search bar located at the top of the page, when not collapsed. 
+
+Clicking on the "Beers and Pairings" button will generate a random beer as well as provide the beer's tagline, image, beer description, brew tips, and various food pairing options.
+
+The recipe search will generate a recipe based on user search request and submitting said request using the "Recipe Search" button.
+
+Finally, a random joke is generated when user submits a request using the "Trivia" button.
+
 __DEMO__
 
 Visit  
@@ -71,3 +81,13 @@ Objective- Design a app that is clean yet functional.
 6. Container - H2
    - [ x] Set H2 text to Montserrat Subrayada
 
+
+__Wireframe__
+
+[Imgur](https://i.imgur.com/Z7a2scE.png)
+
+
+__Final__
+[Imgur](https://i.imgur.com/tZfTp7L.png)
+
+[Imgur](https://i.imgur.com/tZfTp7L.png)

@@ -20,12 +20,13 @@ body{
     margin: 0; 
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity: 0.9;
 }
 
  h1{
     color: #a63c06;
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #F3F0E8;
@@ -41,6 +42,15 @@ body{
     font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
     outline: #a63c06 solid; 
+}
+
+h5.food{
+    color: #a63c06;
+    text-align: center;
+}
+
+h5.name{
+    text-align: center;
 }
 #brewerySearchBtn{
     border-radius: 10px;
@@ -65,17 +75,6 @@ body{
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
     background-color: #a63c06;
 }
-.beerimg{
-    padding:10px;
-    width: 50%;;
-    image-rendering: auto;
-    height: 20px;
-}
-
-.beerImage{ 
-    width: 20%;
-    height: auto; 
-}
 
 .fa{
     display:flex;
@@ -91,6 +90,7 @@ body{
     outline: #a63c06 solid;
 }
 
+
 #displayRecipe{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -105,6 +105,7 @@ body{
     font-family:'Montserrat Subrayada', cursive; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8; 
+
 }
 #recipeSearchBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
@@ -115,11 +116,22 @@ body{
 #recipeForm{
     font-family:'Architects Daughter', cursive; 
     font-size: 15px;
+    justify-content: center;
+}
+
+h5{
+    text-align: left;
+    color: black;
+}
+
+#beermug{
+    font-size: xx-large;
 }
 
 h4{
    color: black;
    font-family: 'Abril Fatface', cursive;
+   
 }
 
 #triviaSection{
@@ -188,40 +200,54 @@ p.trivia_answer{
     }
 }
 .navbar {
-    align-content: space-between;   
+    display: flex;
+    align-content: right;   
     font-family:'Architects Daughter', cursive; 
     margin: 0 0 1rem 0;
     padding: 0;
-    overflow: hidden;
-    float: left;
     font-weight: bold;
 }
-
+.form{
+    text-align: center;
+}
 .navbar-nav{
+    display: block;
     color:#a63c06;
     margin: 0;
-    font-weight: bold;
-    justify-content: space-around;
-    flex-direction: column;
     width: 100%;
-    padding: 0;
-    align-content:center;  
+    padding:0 20px 15px;
 }
 .name{
     font-family: 'Abril Fatface', cursive;
     font-size: 25px;
 }
-
 #brewSearch{
-    font-size: 30px; 
+    font-size: 20px; 
+    display: flex;
+    flex-direction: row-reverse;
 }
-.header-img{
-   background:url('https://i.imgur.com/WYYD4yL.png') no-repeat center top; 
-   background-size: 15px;
+#brewerySearchBtn{
+    direction: rtl;
+}
+video{
+   background:url('https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/b70f2f576411f990130ec944c67306bb.mp4'); 
    width: 100%;
-   height: 300px;
-   margin: 0  0 10px;
-   padding: 0px 20px 15px;
+   padding: 20px 20px 20px 20px
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+p.footerSocial{
+    font-family:'Architects Daughter', cursive;
+    font-size: 20px;
+    color: #F3F0E8;
+}
+
+.fa{
+    font-size: xx-large;
+    text-align: center;
 }
 
 @media only screen and (min-width: 320px){
@@ -237,12 +263,13 @@ p.trivia_answer{
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 3fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         grid-template-areas: 
         brewerylocator brewerylocator brewerylocator
         beepairings displayRecipe displayRecipe 
         beerpairings displayRecipe displayRecipe
         beerpairings trivia trivia
+        footer footer footer
          ;
     }
 
@@ -253,8 +280,8 @@ p.trivia_answer{
         grid-row: 6/ span 9;
         margin: 0 0px 20px 20px;
         text-align: center;
-
     }
+
     #brewerylocator{
         grid-area: brewerylocator;
         padding: 10px 0 10px 0px;
@@ -280,5 +307,12 @@ p.trivia_answer{
         text-align: center;
     }
     
-    
+    footer{
+        grid-area: footer;
+        padding: 10px 0 10px 0px;
+        grid-column: 1 / span 3;
+        grid-row: 15/ span 3;
+        margin: 0 5px 0 20px;
+        text-align: center;
+    }
 }

@@ -144,10 +144,9 @@ recipeSearchBtn.addEventListener('click', (evt)=>{
                 console.log(recipe)
 
 
-                displayR.innerHTML =`<p><h4>${name}</h4></p><p><h5>${recipe}</h5></p><p>Con</p>`        
+                displayR.innerHTML =`<p><h4>${name}</h4></p><p id= "recipeInfo"><h5>${recipe}</h5></p>`        
                     
                 }
-            
             })     
                 .catch((error)=>{
                     console.error('Error:', error)
