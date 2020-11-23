@@ -96,6 +96,6 @@ __Wireframe__
 __Final__
 
 
-![DemoImage](https://i.imgur.com/NL9Q8Ve.png)
+![DemoImage](https://i.imgur.com/L4JH6sd.png)
 
 ![DemoImage](https://i.imgur.com/tZfTp7L.png)
