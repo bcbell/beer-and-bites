@@ -18,14 +18,18 @@ For demo, visit http://beers_and_bites.surge.sh/
 
 __APIs__
 Punk API - https://api.punkapi.com/v2/beers/random 
+
 jService- http://jservice.io/api/random 
+
 Open Brewery DB- https://api.openbrewerydb.org/
+
 TacoFancy- http://taco-randomizer.herokuapp.com/
 
 __HTML Setup and Layout__
 1. HTML Boilerplate
 2. Header
-   - [x ] Link to Google Text Font [fonts.google.com] (https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts), (https://fonts.google.com/specimen/Architects+Daughter?query=architect)
+   - [x ] Incorporated Google Text Font into site. Link to Google Text Fonts [fonts.google.com] (https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts), (https://fonts.google.com/specimen/Architects+Daughter?query=architect) (https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap) (https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap)(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap)
+   -  [ x] Embedded video (https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/b70f2f576411f990130ec944c67306bb.mp4) with a poster image (https://i.imgur.com/WYYD4yL.png)- both retrieved from Canva 
    - [x ] Incorporate CSS and Script lines
    - [ x] Title: "Beers & Bites", add beer and hamburger emojis to title
 3. Body
@@ -60,7 +64,7 @@ __JavaScript Setup and Layout__
 __CSS Setup and Layout__
 Objective- Design a app that is clean yet functional.
 1. Body
-   - [x ] Setup a flex display
+   - [ x ] Setup a flex display
    - [ x ] Set background color gradient to top- resemble a beer
    - [ x ] Center body 
 2.  Header
@@ -84,10 +88,10 @@ Objective- Design a app that is clean yet functional.
 
 __Wireframe__
 
-[Imgur](https://i.imgur.com/Z7a2scE.png)
+![](https://imgur.com/Z7a2scE)
 
 
 __Final__
-[Imgur](https://i.imgur.com/tZfTp7L.png)
+![] (https://imgur.com/NL9Q8Ve)
 
-[Imgur](https://i.imgur.com/tZfTp7L.png)
+![](hhttps://imgur.com/tZfTp7L)
