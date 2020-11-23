@@ -96,6 +96,6 @@ __Wireframe__
 __Final__
 
 
-![DemoImage]<a href="https://imgur.com/Z7a2scE"><img src="https://i.imgur.com/Z7a2scE.png" title="source: imgur.com" /></a>
+![DemoImage](https://i.imgur.com/NL9Q8Ve.png)
 
-![DemoImage](/Users/brittanycoleman/code/unit-one-project/images/Final Product.png)
+![DemoImage](https://i.imgur.com/tZfTp7L.png)
