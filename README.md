@@ -1,6 +1,6 @@
 # beers-and-bites
 
-This project is designed for craft beer and cider enthusiasts! Offering beermaker's insight into various craft beers along with the ideal food pairing options to compliment the taste and flavors. Also, includes recipes search and a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers. 
+This project is designed for craft beer and cider enthusiasts! Offering beermaker's insight into various craft beers along with the ideal food pairing options to compliment the taste and flavors. Also, includes a recipe search engine and a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers. 
 
 __App Overview__
 
