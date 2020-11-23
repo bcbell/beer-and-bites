@@ -17,6 +17,7 @@ __DEMO__
 For demo, visit http://beers_and_bites.surge.sh/  
 
 __APIs__
+
 Punk API - https://api.punkapi.com/v2/beers/random 
 
 jService- http://jservice.io/api/random 
@@ -88,10 +89,13 @@ Objective- Design a app that is clean yet functional.
 
 __Wireframe__
 
-![](https://imgur.com/Z7a2scE)
+![Wireframe](/Users/brittanycoleman/code/unit-one-project/images/wireframe.png)
+
 
 
 __Final__
-![] (https://imgur.com/NL9Q8Ve)
 
-![](hhttps://imgur.com/tZfTp7L)
+
+![DemoImage](/Users/brittanycoleman/code/unit-one-project/images/Final Product ..png)
+
+![DemoImage](/Users/brittanycoleman/code/unit-one-project/images/Final Product.png)
