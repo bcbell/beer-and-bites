@@ -37,6 +37,11 @@ body{
     display: grid;
 }
 
+.beerImage{ 
+    width: 20%;
+    height: auto; 
+}
+
 #beerpairings{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
