@@ -109,6 +109,7 @@ __Future Enhancements__
 4. Improve readability of content 
 5. Add navigation buttons and make separate pages/sections for each
 6. Improve search bar design
-7. Improve search functionality 
+7. Improve search functionality and return 
 8. Improve button display 
+9. Improve site where recipes generate automatically based on pairings options provided
    
