@@ -16,34 +16,35 @@
     <script defer src="js/app.js"></script>
     <title>🍺 Beers & Bites 🍔 </title>
 </head>
+
 <body>
     <div role="nav">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a id = 'beermug' class="navbar-brand" href="#">🍺 </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <form class="formBrew">
-                <input class="form-control mr-lg-2" type="searchInput" id= "brewSearch" placeholder="Brewery Search">
-                <button id = "brewerySearchBtn" type="submit"><h2>Brewery Locator</h2></button>
-              </form>
+                    <input class="form-control mr-lg-2" type="searchInput" id= "brewSearch" placeholder="Brewery Search">
+                    <button id = "brewerySearchBtn" type="submit"><h2>Brewery Locator</h2></button>
+                </form>
               </div>
             </div>
           </nav>
           <main>
-           <h1>Beers & Bites</h1> 
-           <video class= "header-video" autoplay= true loop= true controls src=" https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/b70f2f576411f990130ec944c67306bb.mp4 " type = video/mp4 poster="https://i.imgur.com/WYYD4yL.png" > 
-           </video>
+            <h1>Beers & Bites</h1> 
+            <video class= "header-video" autoplay= true loop= true controls src=" https://s3-us-west-2.amazonaws.com/converterpoint-22/encodings/b70f2f576411f990130ec944c67306bb.mp4 " type = video/mp4 poster="https://i.imgur.com/WYYD4yL.png" > 
+             </video>
           </main>
       <div id="container">
           <section id="beerpairings" class= "frames beerpairings">
             <div class= "content-container">
               <div id="beerPair"><h3>Looking for a brew?</h3></div>
-              <button id= "beerPairBtn"><h2>Beers & Pairings</h2></button>
-              <p id= "displayBP"></p>
-          </div>
+                <button id= "beerPairBtn"><h2>Beers & Pairings</h2></button>
+                <p id= "displayBP"></p>
+            </div>
         </section>
         <section id="displayRecipe">
           <div id="beerPair"><h3>Looking to pair delicious food with your favorite brew?</h3></div>
@@ -53,21 +54,21 @@
                 <button id = "recipeSearchBtn" type="submit"><h2>Recipe Search</h2></button>
               </form>
               <div id= "recipeContent">
-            <p id= "displayRecipes"></p>
-            </div>
+                <p id= "displayRecipes"></p>
+              </div>
           </div>
         </section>
-          <section id= triviaSection> 
-            <div>
+        <section id= triviaSection> 
+          <div>
              <div id="triviaHead"><h3>Want Some Trivia?</h3></div> 
              <button id="triviaBtn"><h2>Trivia?</h2></button>
-            <p id= "trivia"></p>
-            <p id ="triviaMore"></p>
-            </div>
-            </section>
-          <section id="brewerylocator" class = "frames brewerylocator">
-          <div id="locatebrewery"><h3>Looking to Search for your Local Brewery?</h3></div>
-          <p id= "beerLocator"></p>
+              <p id= "trivia"></p>
+              <p id ="triviaMore"></p>
+          </div>
+        </section>
+        <section id="brewerylocator" class = "frames brewerylocator">
+            <div id="locatebrewery"><h3>Looking to Search for your Local Brewery?</h3></div>
+            <p id= "beerLocator"></p>
         </section>
           <footer id="footer style">
             <p class= "footerSocial">Follow your favorite brewery on social media</p>
@@ -77,4 +78,5 @@
           </footer>
       </div>
 </body>
+
 </html>

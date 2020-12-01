@@ -1,16 +1,13 @@
 html{
     box-sizing: border-box;
 }
-
 *::before,
 *::after{
     box-sizing: inherit;
 }
-
 :root{
     font-size: 62.5%;
 }
-
 body{
     display: flex;
     justify-content: center;
@@ -22,8 +19,7 @@ body{
     background-attachment: fixed;
     opacity: 0.9;
 }
-
- h1{
+h1{
     color: #a63c06;
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 60px;
@@ -32,28 +28,23 @@ body{
     -webkit-text-stroke-color: #F3F0E8;
     width: 100%;
 }
-
 #container {
     display: grid;
 }
-
 .beerImage{ 
     width: 20%;
     height: auto; 
 }
-
 #beerpairings{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
     outline: #a63c06 solid; 
 }
-
 h5.food{
     color: #a63c06;
     text-align: center;
 }
-
 h5.name{
     text-align: center;
 }
@@ -66,7 +57,6 @@ h5.name{
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
     background-color: #a63c06;
 }
-
 #beerPairBtn{
     border-radius: 10px;
     background-color: #d5b06c;
@@ -74,19 +64,16 @@ h5.name{
      -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: #F3F0E8; 
 }
-
 #beerPairBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
     background-color: #a63c06;
 }
-
 .fa{
     display:flex;
     font-size: 20px;
     flex-direction: row-reverse;
 }
-
 #brewerylocator{
     background-color: #F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -94,8 +81,6 @@ h5.name{
     font-weight: bolder;
     outline: #a63c06 solid;
 }
-
-
 #displayRecipe{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -103,7 +88,6 @@ h5.name{
     outline: #a63c06 solid; 
     text-align: left;
 }
-
 #recipeSearchBtn{
     border-radius: 10px;
     background-color: #d5b06c;
@@ -117,28 +101,23 @@ h5.name{
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
     background-color: #a63c06;
 }
-
 #recipeForm{
     font-family:'Architects Daughter', cursive; 
     font-size: 15px;
     justify-content: center;
 }
-
 h5{
     text-align: left;
     color: black;
 }
-
 #beermug{
     font-size: xx-large;
 }
-
 h4{
    color: black;
    font-family: 'Abril Fatface', cursive;
    
 }
-
 #triviaSection{
     background-color: #F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -146,7 +125,6 @@ h4{
     font-size: 15px;
     outline: #a63c06 solid;
 }
-
 h3.questionAnswer{
     color: black;
     font-family: 'Abril Fatface', cursive;
@@ -165,7 +143,6 @@ h3.questionAnswer{
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
     background-color: #a63c06;
 }
-
 #answerBtn{
     border-radius: 10px;
     background-color: #d5b06c;
@@ -178,7 +155,6 @@ h3.questionAnswer{
     animation-fill-mode: forwards;
     visibility: hidden;
 }
-
 @keyframes fadeIn{
     0%{
         opacity: 0;
@@ -243,13 +219,11 @@ footer{
     display: flex;
     justify-content: space-around;
 }
-
 p.footerSocial{
     font-family:'Architects Daughter', cursive;
     font-size: 20px;
     color: #F3F0E8;
 }
-
 .fa{
     font-size: xx-large;
     text-align: center;
@@ -260,11 +234,9 @@ p.footerSocial{
         width: 100%;
         float: none;
     }
-
     h1{
         justify-content: center;
     }
-
     #container {
         display: grid;
         gap: 20px;
@@ -278,7 +250,6 @@ p.footerSocial{
         footer footer footer
          ;
     }
-
     #beerpairings{
         grid-area: beerpairing;
         padding: 10px 0px 10px 0;
@@ -312,7 +283,6 @@ p.footerSocial{
         margin: 0 20px 20px 20px;
         text-align: center;
     }
-    
     footer{
         grid-area: footer;
         padding: 10px 0 10px 0px;
