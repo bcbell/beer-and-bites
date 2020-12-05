@@ -19,6 +19,7 @@
   let displayT = document.getElementById('trivia')//Trivia Container
   let displayR =document.getElementById('displayRecipes')
 
+  let displayBLContainer =document.getElementById("brewerylocator")
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
@@ -66,7 +67,7 @@ triviaBtn.addEventListener('click', ()=>{
             const answer= data[beers].answer
            
             displayT.innerHTML=`<p class= "question"><h3 class= questionAnswer> Question:</h3></p>
-                <p>${question}</p><button id= "answerBtn"> Answer</button><p class= "trivia_answer">${answer}</p>`
+                <p>${question}</p><p class= "question"><h3 class= questionAnswer> Answer:</h3></p><p class= "trivia_answer">${answer}</p>`
             }  
 })   
             .catch((err)=>{
@@ -97,11 +98,11 @@ brewerySearchBtn.addEventListener('click', (evt)=>{
                  const phone= data[beers].phone
                  const website= data[beers].website_url
                  
-             
+        
                 
-                displayBL.innerHTML =`<p><h4>${name}</h4></p><p>Address: ${street}</p><p>${city}, 
+                 displayBP.innerHTML =`<p><h4>${name}</h4></p><p>Address: ${street}</p><p>${city}, 
                     ${state} ${zip} ${country}</p><p>Phone: ${phone}</p><p>Website : ${website}</p>`
-                
+               
                  
             }
         })
@@ -125,11 +126,12 @@ recipeSearchBtn.addEventListener('click', (evt)=>{
                 const {base_layer} = data.base_layer
                 const name = data.name
                 const recipe = data.recipe
+                const url =data.url
+               
                 
 
-
-                displayR.innerHTML =`<p><h4>${name}</h4></p><p id= "recipeInfo"><h5>${recipe}</h5>
-                    </p>`        
+                displayR.innerHTML =`<p><h4>${name}</h4></p><p id= "recipeInfo"><h5><ul>${recipe}</ul></h5>
+                    </p><p id= "url"><p>For the complete recipe, visit :</p><p> ${url}</p>`        
                     
                 }
             })     
