@@ -15,7 +15,6 @@
  
   //Container
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
-  let displayBL= document.getElementById('beerLocator') //Brewery Locator Container
   let displayT = document.getElementById('trivia')//Trivia Container
   let displayR =document.getElementById('displayRecipes')
 
