@@ -39,8 +39,9 @@ h1{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
-    border: #a63c06 solid 5px; 
+    border:  solid 15px; 
     border-radius: 10%;
+    border-image: 50 stretch linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
 }
 h5.food{
     color: #a63c06;
@@ -51,24 +52,27 @@ h5.name{
 }
 #brewerySearchBtn{
     border-radius: 10px;
-    background-color: #d5b06c;
+    font-family:'Montserrat Subrayada', cursive; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F3F0E8; 
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);;
 }
 #brewerySearchBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
-    background-color: #a63c06;
+    background-color: white;
 }
 #beerPairBtn{
     border-radius: 10px;
-    background-color: #d5b06c;
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);;
     font-family:'Montserrat Subrayada', cursive; 
      -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: #F3F0E8; 
 }
 #beerPairBtn:hover{
+    background-color: #d5b06c;
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
-    background-color: #a63c06;
 }
 .fa{
     display:flex;
@@ -80,27 +84,28 @@ h5.name{
     background-color:#F3F0E8;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
-    border: #a63c06 solid 5px; 
+    border: solid 10px; 
     text-align: left;
+    border-image: 50 stretch linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
     
 }
 #recipeSearchBtn{
     border-radius: 10px;
-    background-color: #d5b06c;
     font-family:'Montserrat Subrayada', cursive; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8; 
-
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);;
 }
 #recipeSearchBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
-    background-color: #a63c06;
 }
 #recipeForm{
     font-family:'Architects Daughter', cursive; 
     font-size: 15px;
     justify-content: center;
+    background-clip: content-box;
+    border-image: 50 stretch linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
 }
 #recipeInfo{
     list-style: square;
@@ -122,7 +127,9 @@ h4{
     font-family: 'Montserrat Alternates', sans-serif;
     color: #a63c06;
     font-size: 15px;
-    outline: #a63c06 solid;
+    border: solid 10px;
+    background-clip: padding-box;
+    border-image: 50 stretch linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
 }
 h3.questionAnswer{
     color: black;
@@ -131,7 +138,8 @@ h3.questionAnswer{
 }
 #triviaBtn{
     border-radius: 10px;
-    background-color: #d5b06c;
+    /* background-color: #d5b06c; */
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);;
     font-family:'Montserrat Subrayada', cursive; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8;  
@@ -140,20 +148,9 @@ h3.questionAnswer{
 #triviaBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;
     text-shadow: 100px 100px 100px 0ox #F3F0E8;
-    background-color: #a63c06;
+
 }
-#answerBtn{
-    border-radius: 10px;
-    background-color: #d5b06c;
-    font-family:'Montserrat Subrayada', cursive; 
-    font-size: 20px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F3F0E8;  
-    transition-timing-function: ease-in;
-    animation: 10s fadeIn;
-    animation-fill-mode: forwards;
-    visibility: hidden;
-}
+
 @keyframes fadeIn{
     0%{
         opacity: 0;
@@ -235,6 +232,7 @@ p.copyright{
     text-align: center;
 }
 
+
 @media only screen and (min-width: 320px){
     .navbar{
         width: 100%;
@@ -251,7 +249,7 @@ p.copyright{
         grid-template-areas: 
         beepairings displayRecipe displayRecipe 
         beerpairings displayRecipe displayRecipe
-        beerpairings trivia trivia
+        beerpairings trivia video
         footer footer footer
          ;
     }
@@ -275,10 +273,17 @@ p.copyright{
     #triviaSection{
         grid-area: trivia;
         padding: 10px 0px 10px 0px;
-        grid-column: 2/ span 3;
+        grid-column: 2;
         grid-row: 7 / span 3;
         margin: 0 20px 20px 20px;
         text-align: center;
+    }
+    #pairingsVideo{
+        grid-area: video;
+        grid-column: 3;
+        grid-row: 7 / span 3;
+        margin: 0 20px 20px 20px;
+        
     }
     footer{
         grid-area: footer;
