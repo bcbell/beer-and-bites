@@ -16,9 +16,8 @@
   //Container
   let displayBP= document.getElementById('displayBP') //Beer & Pairings Container
   let displayT = document.getElementById('trivia')//Trivia Container
-  let displayR =document.getElementById('displayRecipes')
-
-  let displayBLContainer =document.getElementById("brewerylocator")
+  let displayR =document.getElementById('displayRecipes') //Recipe Container
+  
   /*----------------Event Listeners------------*/
 //Beer & Pairings 
 beerPairBtn.addEventListener('click', ()=>{
