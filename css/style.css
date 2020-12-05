@@ -1,5 +1,6 @@
 html{
     box-sizing: border-box;
+  
 }
 *::before,
 *::after{
@@ -13,7 +14,9 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
+    background-image:url('https://i.imgur.com/QCWN74V.png') ;
+    background-position: center;
+    background-size: cover ;
     margin: 0; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -229,7 +232,7 @@ p.footerSocial{
     color: #F3F0E8;
 }
 p.copyright{
-    color: white;
+    color: #F3F0E8;
     font-size: 18px;
     font-family:'Architects Daughter', cursive;
 }
