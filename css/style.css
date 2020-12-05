@@ -213,6 +213,12 @@ video{
    overflow: hidden;
    
 }
+iframe{
+    border: solid 10px;
+    background-clip: padding-box;
+    border-image: 50 stretch linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
+    width:100%;
+}
 footer{
     display: flex;
     justify-content: space-around;
