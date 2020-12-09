@@ -97,7 +97,7 @@ h5.name{
     font-family:'Montserrat Subrayada', cursive; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #F3F0E8; 
-    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);;
+    background-image: linear-gradient(to top, #37201c, #532b21, #6f3723, #8a4622, #a4561d, #b16522, #bd7426, #c8842c, #cc9341, #d0a256, #d5b06c, #dabe82, #F3F0E8);
 }
 #recipeSearchBtn:hover{
     box-shadow: 10px 10px 100px 0px #F3F0E8;

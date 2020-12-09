@@ -115,14 +115,14 @@ __Future Enhancements__
    
 
 __List of Technologies Used:__
--HTML
--CSS
--JavaScript
--BootStrap
--Postman
--APIs (listed above)
--Google Fonts
--Wireframe
--Canva
--Imgur
--YouTube
+- HTML
+- CSS
+- JavaScript
+- BootStrap
+- Postman
+- APIs (listed above)
+- Google Fonts
+- Wireframe
+- Canva
+- Imgur
+- YouTube
