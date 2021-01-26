@@ -1,30 +1,20 @@
 # beers-and-bites
 
-This project is designed for craft beer and cider enthusiasts! Offering beermaker's insight into various craft beers along with the ideal food pairing options to compliment the taste and flavors. Also, includes a recipe search engine and a Breweries, Cideries, and Craft Beer Bottle Shop locator for tasters and brew makers. 
+This project is designed for families with kids. As a mother of 2 toddlers, I wanted to create an application that would be beneficial to parents and caregivers looking to kid-friendly meals, attractions, and restaurants. Offering families a unique varity resources for entertainment and meal time.  
 
 __App Overview__
 
-To search for breweries, user will input either name, address, city or zip code into the search bar located at the top of the page, when not collapsed. 
-
-Clicking on the "Beers and Pairings" button will generate a random beer as well as provide the beer's tagline, image, beer description, brew tips, and various food pairing options.
-
-The recipe search will generate a recipe based on user search request and submitting said request using the "Recipe Search" button.
-
-Finally, a random joke is generated when user submits a request using the "Trivia" button.
+For security, the application requires users to login into the application through Google OAuth to access the  features. 
 
 __DEMO__
 
-For demo, visit http://beers_and_bites.surge.sh/  
+For demo, visit 
 
 __APIs__
+Jservice.io
+PunkAPI
+OpenBreweryDB
 
-Punk API - https://api.punkapi.com/v2/beers/random 
-
-jService- http://jservice.io/api/random 
-
-Open Brewery DB- https://api.openbrewerydb.org/
-
-TacoFancy- http://taco-randomizer.herokuapp.com/
 
 __HTML Setup and Layout__
 1. HTML Boilerplate
@@ -89,29 +79,22 @@ Objective- Design a app that is clean yet functional.
 
 __Wireframe__
 
-![Wireframe](https://i.imgur.com/Z7a2scE.png)
+![Wireframe](url)
 
 
 
 __Final__
 
 
-![DemoImage](https://i.imgur.com/L4JH6sd.png)
+![DemoImage](url)
 
-![DemoImage](https://i.imgur.com/tZfTp7L.png)
+![DemoImage](url)
 
 
 __Future Enhancements__
 
-1. Make improvement and update APIs 
-2. Update background color 
-3. Add additional content 
-4. Improve readability of content 
-5. Add navigation buttons and make separate pages/sections for each
-6. Improve search bar design
-7. Improve search functionality and return 
-8. Improve button display 
-9. Improve site where recipes generate automatically based on pairings options provided
+1. Future Enhancements here
+
    
 
 __List of Technologies Used:__
