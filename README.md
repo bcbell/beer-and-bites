@@ -8,7 +8,7 @@ For security, the application requires users to login into the application throu
 
 __DEMO__
 
-For demo, visit 
+For demo, visit http://beers_and_bites.surge.sh/
 
 __APIs__
 Jservice.io
